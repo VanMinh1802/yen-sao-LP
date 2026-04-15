@@ -4,3 +4,6 @@
 .worktrees/
 .DS_Store
 node_modules/ 
+scripts/
+assets/
+mockup.html
