@@ -40,6 +40,7 @@
   --color-black-10: rgba(0,0,0,0.1);
 
   /* Fonts */
+  --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-display: var(--font-display);
@@ -137,6 +138,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body), 'Be Vietnam Pro', sans-serif;
   }
   html {
     @apply font-body;
