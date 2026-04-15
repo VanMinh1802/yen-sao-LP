@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "Yến sào 100% tự nhiên từ nhà yến riêng tại Nha Trang. Hơn 20 năm uy tín, tham quan trực tiếp, giao hàng toàn quốc.",
     images: [
       {
-        url: "/images/hero/hinh-yen.png",
+        url: "/images/hero/hinh-yen.webp",
         width: 1200,
         height: 630,
         alt: "Yến Sào Ngọc Thảo Khánh Hòa — Sản phẩm yến sào cao cấp",
@@ -81,7 +81,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: SITE_NAME,
-    image: `${SITE_URL}/images/hero/hinh-yen.png`,
+    image: `${SITE_URL}/images/hero/hinh-yen.webp`,
     url: SITE_URL,
     telephone: "+84919217882",
     email: "yensaongocthao@gmail.com",
@@ -116,7 +116,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
-        <link rel="preload" href="/images/hero/hinh-yen.png" as="image" fetchPriority="high" />
+        <link rel="preload" href="/images/hero/hinh-yen.webp" as="image" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

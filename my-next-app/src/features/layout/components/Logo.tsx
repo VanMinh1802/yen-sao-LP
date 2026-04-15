@@ -18,7 +18,7 @@ export function Logo({ className, onClick }: LogoProps) {
     >
       <div className="absolute top-[-40px] left-[-150px] h-[130px] w-[350px]">
         <Image
-          src="/images/logo/logoyen.png"
+          src="/images/logo/logoyen.webp"
           alt="Logo Yến Sào Ngọc Thảo"
           fill
           className="object-contain object-left"

@@ -17,7 +17,7 @@ export function Footer() {
             <div className="flex items-center space-x-3">
               <div className="relative w-12 h-12 shrink-0">
                 <Image
-                  src="/images/logo/logoyen.png"
+                  src="/images/logo/logoyen.webp"
                   alt="Yến Sào Ngọc Thảo"
                   fill
                   className="object-contain"

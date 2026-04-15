@@ -9,7 +9,7 @@ export function HeroSection() {
       {/* Background Image Layer: relative 350px height on mobile, absolute full-bleed on desktop */}
       <div 
         className="relative lg:absolute lg:inset-0 w-full h-[350px] lg:h-full z-[1] bg-cover bg-[center_top] lg:bg-center bg-no-repeat shrink-0"
-        style={{ backgroundImage: "url('/images/hero/hinh-yen.png')" }}
+        style={{ backgroundImage: "url('/images/hero/hinh-yen.webp')" }}
       >
         <div className="absolute inset-0 bg-black/15" />
         {/* Soft gradient fade on mobile to blend with content below */}

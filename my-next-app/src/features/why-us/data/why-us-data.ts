@@ -17,7 +17,7 @@ export const whyUsData: BentoCardData[] = [
     title: "Nhà Yến Riêng",
     description: "Sở hữu hệ thống nhà yến đô thị sinh thái tại Nha Trang. Chủ động tuyệt đối nguồn cung và cam kết chất lượng từng tổ yến.",
     variant: "large",
-    backgroundImage: "/images/timeline/2010.jpeg", // Using timeline 2010 image (Nhà Yến)
+    backgroundImage: "/images/timeline/2010.webp", // Using timeline 2010 image (Nhà Yến)
     counterTarget: null,
   },
   {
