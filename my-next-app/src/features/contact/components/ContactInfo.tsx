@@ -5,7 +5,7 @@ interface ContactInfoItem {
 }
 
 const contactItems: ContactInfoItem[] = [
-  { icon: "📍", content: "Nha Trang, Khánh Hòa" },
+  { icon: "📍", content: "Tổ 13, Nha Trang, Khánh Hòa" },
   { icon: "📞", content: "0919 217 882", href: "tel:0919217882" },
   { icon: "✉️", content: "yensaongocthao@gmail.com", href: "mailto:yensaongocthao@gmail.com" },
   { icon: "💬", content: "Zalo Official", href: "https://zalo.me/0919217882" },
