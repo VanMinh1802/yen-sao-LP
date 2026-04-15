@@ -1,4 +1,5 @@
 import { HeroSection } from "@/features/hero";
+import { AboutSection } from "@/features/about";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         Feature assembly points will be filled in subsequent tasks 
       */}
       <HeroSection />
-      {/* <AboutTimelineSection /> */}
+      <AboutSection />
       {/* <ProductsSection /> */}
       {/* <ProcessSection /> */}
       {/* <WhyUsSection /> */}
