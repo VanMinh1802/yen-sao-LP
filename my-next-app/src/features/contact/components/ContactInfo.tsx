@@ -13,22 +13,13 @@ const contactItems: ContactInfoItem[] = [
   { icon: <MessageCircle className="w-[18px] h-[18px]" />, content: "Zalo Official", href: "https://zalo.me/0919217882" },
 ];
 
-interface SocialLink {
-  icon: string;
-  label: string;
-  href: string;
-}
 
-const socialLinks: SocialLink[] = [
-  { icon: "📘", label: "Facebook", href: "https://www.facebook.com/yensaongocthao" },
-  { icon: "🎵", label: "TikTok", href: "#" },
-];
 
 export function ContactInfo() {
   return (
     <div className="mt-6 pt-6 border-t border-white/10">
       {/* Contact Info — Asymmetric 2-column grid */}
-      <div className="grid grid-cols-[1.6fr_1fr] gap-x-2 gap-y-4 mb-6">
+      <div className="grid grid-cols-[1.6fr_1fr] gap-x-2 gap-y-4">
         {contactItems.map((item, i) => {
           const inner = (
             <div className="flex items-start gap-2 text-white/80 hover:text-white transition-colors group min-w-0">
@@ -53,21 +44,7 @@ export function ContactInfo() {
         })}
       </div>
 
-      {/* Social Links */}
-      <div className="flex gap-3">
-        {socialLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={link.label}
-            className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-lg hover:bg-gold-500 hover:text-brown-900 hover:border-gold-500 hover:-translate-y-[3px] shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300"
-          >
-            {link.icon}
-          </a>
-        ))}
-      </div>
+
     </div>
   );
 }
