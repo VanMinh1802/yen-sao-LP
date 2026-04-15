@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+.worktrees/
+.DS_Store
+node_modules/ 

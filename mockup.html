@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yến Sào Ngọc Thảo Khánh Hòa — 20 Năm Uy Tín</title>
+  <meta name="description" content="Yến Sào Ngọc Thảo Khánh Hòa — 20 năm kinh nghiệm, yến sào 100% tự nhiên, có nhà yến riêng tại Nha Trang." />
+  <meta name="keywords" content="yến sào, ngọc thảo, khánh hòa, nha trang, bird nest, yến thô, hộp quà tặng" />
+  <meta property="og:title" content="Yến Sào Ngọc Thảo Khánh Hòa — 20 Năm Uy Tín" />
+  <meta property="og:description" content="Yến sào 100% tự nhiên từ nhà yến riêng tại Nha Trang. Hơn 20 năm uy tín." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'DFVN Abygaer';
+      src: url('./assets/DFVN%20Abygaer.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    /* ============================================
+       CSS RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      /* Brand Colors */
+      --red-900: #5C0A0A;
+      --red-800: #7A1010;
+      --red-700: #8B0000;
+      --red-600: #A31B1B;
+      --red-500: #C41E3A;
+      --red-400: #E8384F;
+      --gold-700: #8B6914;
+      --gold-600: #B8860B;
+      --gold-500: #D4A843;
+      --gold-400: #E8C55A;
+      --gold-300: #FFD700;
+      --gold-200: #FFE44D;
+      --cream-100: #FEFCF3;
+      --cream-200: #FFF8F0;
+      --cream-300: #FFF5E6;
+      --cream-400: #FFECD2;
+      --brown-900: #1A0A00;
+      --brown-800: #2D1810;
+      --brown-700: #3D2B1F;
+      --brown-600: #5C4033;
+      --white: #FFFFFF;
+      --white-90: rgba(255,255,255,0.9);
+      --white-70: rgba(255,255,255,0.7);
+      --white-50: rgba(255,255,255,0.5);
+      --white-20: rgba(255,255,255,0.2);
+      --black-80: rgba(0,0,0,0.8);
+      --black-50: rgba(0,0,0,0.5);
+      --black-30: rgba(0,0,0,0.3);
+      --black-10: rgba(0,0,0,0.1);
+
+      /* Typography */
+      --font-heading: 'Be Vietnam Pro', sans-serif;
+      --font-body: 'Be Vietnam Pro', sans-serif;
+
+      /* Spacing */
+      --section-padding: 100px 0;
+      --container-width: 1200px;
+
+      /* Transitions */
+      --transition-fast: 0.2s ease;
+      --transition-normal: 0.3s ease;
+      --transition-slow: 0.6s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--brown-800);
+      background-color: var(--cream-100);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ============================================
+       ANIMATIONS
+       ============================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.4); }
+      50% { box-shadow: 0 0 0 15px rgba(212, 168, 67, 0); }
+    }
+    @keyframes scroll-indicator {
+      0% { opacity: 1; transform: translateY(0); }
+      50% { opacity: 0.5; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       HEADER / NAVIGATION
+       ============================================ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      transition: all var(--transition-normal);
+      background: transparent;
+    }
+    .header.scrolled {
+      background: rgba(26, 10, 0, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header__logo {
+      position: relative;
+      display: block;
+      width: 350px;
+      height: 48px;
+    }
+    .header__logo-icon {
+      position: absolute;
+      top: -40px;
+      left: -150px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .header__logo-icon img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+    .header__logo-text {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .header__logo-text small {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--gold-400);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .header__nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white-90);
+      letter-spacing: 0.5px;
+      transition: color var(--transition-fast);
+      position: relative;
+    }
+    .header__nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-400);
+      transition: width var(--transition-normal);
+    }
+    .header__nav a:hover { color: var(--gold-400); }
+    .header__nav a:hover::after { width: 100%; }
+    .header__cta {
+      background: linear-gradient(135deg, var(--red-500), var(--red-700));
+      color: var(--white) !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      transition: all var(--transition-normal);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .header__cta::after { display: none !important; }
+    .header__cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(196, 30, 58, 0.4);
+      background: linear-gradient(135deg, var(--red-400), var(--red-600));
+    }
+
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      z-index: 10000;
+      padding: 12px 24px;
+      background: var(--red-500);
+      color: var(--white);
+      border-radius: 0 0 8px 8px;
+      font-weight: 600;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Mobile Menu Toggle */
+    .header__menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .header__menu-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: var(--transition-normal);
+      display: block;
+      pointer-events: none;
+    }
+
+
+    /* ============================================
+       HERO SECTION (LUXURY DARK SPLIT)
+       ============================================ */
+    .hero-new {
+      position: relative;
+      display: flex;
+      min-height: 100vh;
+      background: var(--brown-900, #1A0A00); /* Very dark brown */
+    }
+    .hero-new__content {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      padding: 40px 32px 40px 17vw;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-new__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .hero-new__img-inner {
+      width: 100%; height: 100%;
+      background: url('./assets/ảnh yến/hình yến.png') center/cover no-repeat;
+    }
+
+    .hero-new__img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.15); /* subtle dark overlay */
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .hero-new__label {
+      font-size: clamp(11px, 1vw, 14px);
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-500, #D4A843);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+    .hero-new__label::before {
+      content: '';
+      width: 40px; height: 1px;
+      background: var(--gold-500, #D4A843);
+      display: inline-block;
+    }
+    .hero-new__title {
+      font-family: 'DFVN Abygaer', var(--font-heading, 'Be Vietnam Pro', sans-serif);
+      font-size: clamp(52px, 6vw, 100px);
+      font-weight: 700;
+      color: #ffeeba;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero-new__title em {
+      font-style: normal;
+      color: #ffeeba;
+    }
+    .hero-new__slogan {
+      font-family: var(--font-heading, 'Be Vietnam Pro', sans-serif);
+      font-size: clamp(18px, 1.8vw, 26px);
+      font-style: italic;
+      color: #ffeeba;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+    .hero-new__slogan span {
+      display: block;
+      font-size: 0.9em;
+      margin-top: 2px;
+      opacity: 0.85;
+    }
+
+    .hero-new__btns { display: flex; flex-direction: row; gap: 16px; align-items: center; justify-content: flex-start; width: 100%; }
+    .hero-new__btns .btn-gold {
+      padding: clamp(14px, 1vw, 18px) clamp(28px, 2vw, 36px);
+      background: linear-gradient(135deg, var(--gold-500, #B8860B), var(--gold-400, #D4A843));
+      color: #1a0f0a; 
+      border-radius: 50px;
+      font-size: clamp(14px, 1vw, 16px);
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .hero-new__btns .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(184,134,11,0.4); }
+    
+    .hero-new__btns .btn-outline-gold {
+      padding: clamp(14px, 1vw, 18px) clamp(28px, 2vw, 36px);
+      background: transparent;
+      color: var(--gold-400, #D4A843);
+      font-size: clamp(14px, 1vw, 16px);
+      border: 2px solid var(--gold-400, #D4A843);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .hero-new__btns .btn-outline-gold:hover { background: var(--gold-400, #D4A843); color: #1a0f0a; }
+
+    .hero-new__stats {
+      display: flex;
+      gap: 32px;
+      justify-content: flex-start;
+      margin-top: 40px;
+      padding-top: 32px;
+      padding-right: 40px;
+      border-top: 1px solid rgba(212,168,67,0.25);
+    }
+    .hero-new__stat-mini-num {
+      font-family: var(--font-heading, 'Be Vietnam Pro', sans-serif);
+      font-size: clamp(24px, 3vw, 44px);
+      font-weight: 700;
+      color: #FFFFFF;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .hero-new__stat-mini-lbl {
+      font-size: clamp(11px, 1vw, 15px);
+      color: var(--gold-400, #D4A843);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .hero-new { flex-direction: column-reverse; height: auto; }
+      .hero-new__img { width: 100%; height: 350px; }
+      .hero-new__img::before {
+        left: 0; right: 0; top: -1px; bottom: auto; width: 100%; height: 80px;
+        background: linear-gradient(to bottom, var(--brown-900, #1A0A00), transparent);
+      }
+      .hero-new__content { padding: 40px 24px; }
+      .hero-new__btns { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; }
+      .hero-new__btns a { width: auto; }
+    }
+\n    /* ============================================
+       SECTION COMMON STYLES
+       ============================================ */
+    .section {
+      padding: var(--section-padding);
+    }
+    .section__header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section__label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--red-500);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section__title {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      color: var(--brown-800);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .section__divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-500), var(--gold-300));
+      margin: 0 auto 20px;
+      border-radius: 2px;
+    }
+    .section__subtitle {
+      font-size: 17px;
+      color: var(--brown-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       ABOUT SECTION (TIMELINE)
+       ============================================ */
+    .about {
+      background: var(--white);
+      position: relative;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 60px auto 40px;
+      padding: 20px 0;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: rgba(212, 168, 67, 0.3);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    .timeline-item::after { 
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: -8px;
+      background: var(--white);
+      border: 4px solid var(--gold-500);
+      top: 40px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item--left {
+      left: 0;
+    }
+    .timeline-item--right {
+      left: 50%;
+    }
+    .timeline-item--right::after {
+      left: -8px;
+    }
+    .timeline-card {
+      background: var(--cream-100);
+      border: 1px solid rgba(212, 168, 67, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      transition: transform var(--transition-normal);
+    }
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-400);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    }
+    .timeline-item--left .timeline-card {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+    .timeline-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid var(--white);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .timeline-content {
+      flex: 1;
+    }
+    .timeline-year {
+      color: var(--red-500);
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .timeline-year::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(212, 168, 67, 0.3);
+    }
+    .timeline-item--left .timeline-year {
+      flex-direction: row-reverse;
+    }
+    .timeline-title {
+      color: var(--brown-800);
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .timeline-desc {
+      color: var(--brown-600);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .about__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 60px auto 0;
+    }
+    .about__stat {
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--cream-200);
+      border-radius: 16px;
+      transition: transform var(--transition-normal);
+      border: 1px solid rgba(212, 168, 67, 0.1);
+    }
+    .about__stat:hover {
+      transform: translateY(-4px);
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-color: var(--gold-300);
+    }
+    .about__stat-number {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--red-500);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .about__stat-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brown-800);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================
+       PRODUCTS SECTION
+       ============================================ */
+    .products {
+      background: var(--cream-100);
+    }
+    .products__tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .products__tab {
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--black-10);
+      background: var(--white);
+      color: var(--brown-700);
+      transition: all var(--transition-normal);
+    }
+    .products__tab:hover {
+      border-color: var(--gold-500);
+      color: var(--gold-600);
+    }
+    .products__tab.active {
+      background: linear-gradient(135deg, var(--red-500), var(--red-700));
+      color: var(--white);
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+    }
+    .products__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .product-card {
+      background: transparent;
+      perspective: 1000px;
+      height: 480px; /* fixed height for cards to flip cleanly */
+    }
+    .product-card__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform-style: preserve-3d;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .product-card:hover .product-card__inner {
+      transform: rotateY(180deg);
+    }
+    .product-card__front, .product-card__back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.04);
+      top: 0;
+      left: 0;
+    }
+    .product-card__front {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card__back {
+      background: linear-gradient(135deg, var(--red-700), var(--gold-500));
+      color: var(--white);
+      transform: rotateY(180deg);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-card__back-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+      flex: 1;
+    }
+    .product-card__back-list li {
+      font-size: 14px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      line-height: 1.5;
+    }
+    .product-card__back-list li:last-child {
+      border-bottom: none;
+    }
+    .product-card__back-list strong {
+      color: var(--gold-300);
+      font-size: 15px;
+    }
+    .product-card__back-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--white);
+      color: var(--red-700);
+      text-align: center;
+      border-radius: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      border: none;
+      display: block;
+      cursor: pointer;
+    }
+    .product-card__back-btn:hover {
+      background: var(--gold-400);
+      color: var(--white);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .product-card__image {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .product-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-card__image img {
+      transform: scale(1.08);
+    }
+    .product-card__badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: linear-gradient(135deg, var(--red-500), var(--red-700));
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .product-card__body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-card__name {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown-800);
+      margin-bottom: 8px;
+    }
+    .product-card__description {
+      font-size: 14px;
+      color: var(--brown-600);
+      margin-bottom: auto;
+      line-height: 1.6;
+    }
+    .product-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    .product-card__price {
+      font-size: 14px;
+      color: var(--red-500);
+      font-weight: 600;
+      font-style: italic;
+    }
+    .product-card__action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-600);
+      transition: color var(--transition-fast);
+      cursor: pointer;
+    }
+    .product-card__action:hover { color: var(--red-500); }
+
+    /* ============================================
+       PROCESS SECTION
+       ============================================ */
+    .process {
+      background: var(--cream-200); /* cream nhẹ */
+      position: relative;
+    }
+    .process__wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .process__line {
+      position: absolute;
+      top: 50px;
+      left: 10%;
+      right: 10%;
+      height: 4px;
+      background: rgba(212, 168, 67, 0.2);
+      border-radius: 2px;
+      z-index: 1;
+    }
+    .process__line-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--gold-400), var(--gold-600));
+      border-radius: 2px;
+      transition: width 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .process__wrapper.visible .process__line-fill {
+      width: 100%;
+    }
+    .process__steps {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+    .process__step {
+      flex: 1;
+      text-align: center;
+      padding: 0 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .process__wrapper.visible .process__step {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .process__wrapper.visible .process__step:nth-child(1) { transition-delay: 0.2s; }
+    .process__wrapper.visible .process__step:nth-child(2) { transition-delay: 0.4s; }
+    .process__wrapper.visible .process__step:nth-child(3) { transition-delay: 0.6s; }
+    .process__wrapper.visible .process__step:nth-child(4) { transition-delay: 0.8s; }
+    .process__wrapper.visible .process__step:nth-child(5) { transition-delay: 1.0s; }
+    
+    .process__icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, var(--white), var(--cream-100));
+      border: 4px solid var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      box-shadow: 0 10px 30px rgba(212, 168, 67, 0.2);
+      position: relative;
+    }
+    .process__icon::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border: 2px dashed rgba(212, 168, 67, 0.4);
+      border-radius: 50%;
+      animation: spin-slow 15s linear infinite;
+    }
+    @keyframes spin-slow {
+      100% { transform: rotate(360deg); }
+    }
+    .process__step-num {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 28px;
+      height: 28px;
+      background: var(--red-500);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 14px;
+      border: 2px solid var(--white);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .process__title {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown-800);
+      margin-bottom: 12px;
+    }
+    .process__desc {
+      font-size: 14px;
+      color: var(--brown-600);
+      line-height: 1.5;
+    }
+
+    /* ============================================
+       WHY US SECTION
+       ============================================ */
+    .why-us {
+      background: linear-gradient(135deg, var(--brown-900) 0%, var(--red-900) 50%, var(--brown-900) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .why-us::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212,168,67,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .why-us .section__label { color: var(--gold-400); }
+    .why-us .section__title { color: var(--white); }
+    .why-us .section__subtitle { color: var(--white-70); }
+    .why-us__bento-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 240px);
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .why-us__card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .why-us__card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: rgba(212, 168, 67, 0.5); /* Gold glow */
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(212, 168, 67, 0.1);
+    }
+    .why-us__card--large {
+      grid-column: span 2;
+      grid-row: span 2;
+      justify-content: flex-end;
+      padding: 40px;
+    }
+    .why-us__card--large::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('./assets/ảnh yến/IMG_7363.jpeg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+      transition: all 0.6s ease;
+      z-index: 0;
+    }
+    .why-us__card--large:hover::before {
+      transform: scale(1.08);
+      opacity: 0.5;
+    }
+    .why-us__card--large::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 80%);
+      z-index: 1;
+    }
+    .why-us__card--stats {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba(212, 168, 67, 0.1);
+      border-color: rgba(212, 168, 67, 0.2);
+    }
+    .why-us__card-content {
+      position: relative;
+      z-index: 2;
+    }
+    .why-us__card--stats .counter {
+      font-size: 48px;
+      color: var(--gold-400);
+      font-family: var(--font-heading);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .why-us__icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .why-us__card h4 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+      position: relative;
+      z-index: 2;
+    }
+    .why-us__card--large h4 {
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .why-us__card p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ============================================
+       TESTIMONIALS SECTION
+       ============================================ */
+    .testimonials {
+      background: var(--cream-200);
+      overflow: hidden;
+    }
+    .testimonials__carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 420px;
+      margin-top: 24px;
+      perspective: 1000px;
+    }
+    .testimonial-card {
+      position: absolute;
+      width: 100%;
+      max-width: 600px;
+      background: var(--white);
+      padding: 40px 48px;
+      border-radius: 24px;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+      opacity: 0;
+      transform: translateX(100%) scale(0.8);
+      z-index: 1;
+      pointer-events: none;
+      text-align: center;
+    }
+    .testimonial-card.active {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      z-index: 3;
+      pointer-events: auto;
+    }
+    .testimonial-card.prev {
+      opacity: 0.4;
+      transform: translateX(-55%) scale(0.85);
+      z-index: 2;
+    }
+    .testimonial-card.next {
+      opacity: 0.4;
+      transform: translateX(55%) scale(0.85);
+      z-index: 2;
+    }
+    .testimonial-card__quote-mark {
+      font-family: var(--font-heading);
+      font-size: 80px;
+      color: var(--gold-300);
+      line-height: 1;
+      margin-bottom: -20px;
+      opacity: 0.5;
+    }
+    .testimonial-card__stars {
+      display: inline-flex;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .testimonial-card__star {
+      color: var(--gold-400);
+      font-size: 20px;
+    }
+    .testimonial-card__text {
+      font-size: 16px;
+      color: var(--brown-800);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+    .testimonial-card__author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .testimonial-card__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--red-500), var(--gold-500));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 24px;
+      box-shadow: 0 4px 15px rgba(212, 168, 67, 0.4);
+    }
+    .testimonial-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--brown-900);
+    }
+    .testimonial-card__location {
+      font-size: 14px;
+      color: var(--brown-600);
+    }
+    .testimonials__pagination {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .testimonials__dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(212, 168, 67, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .testimonials__dot.active {
+      background: var(--gold-500);
+      width: 32px;
+      border-radius: 8px;
+    }
+
+    /* ============================================
+       CONTACT SECTION
+       ============================================ */
+    .contact {
+      position: relative;
+      background: var(--white);
+      padding: 0;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .contact__map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .contact__map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: contrast(1.05) brightness(0.95);
+    }
+    .contact__overlay {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      pointer-events: none;
+    }
+    .contact__glass-card {
+      pointer-events: auto;
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(135deg, rgba(38, 17, 8, 0.95), rgba(138, 28, 28, 0.95));
+      border: 1px solid var(--gold-500);
+      padding: 40px;
+      border-radius: 20px;
+      margin: 40px 0;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(212,168,67,0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .contact__glass-card h3 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold-400);
+      margin-bottom: 8px;
+    }
+    .contact__glass-card > p {
+      font-size: 15px;
+      color: var(--white-70);
+      margin-bottom: 24px;
+    }
+    .contact__glass-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact__info-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--white);
+    }
+    .contact__info-item span {
+      font-size: 16px;
+    }
+    .contact__info-item strong {
+      font-weight: 600;
+    }
+    .contact__info-item a { color: inherit; }
+    .contact__info-item a:hover { color: var(--gold-400); }
+    .contact__glass-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .contact__social {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all var(--transition-normal);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white);
+    }
+    .contact__social:hover {
+      background: var(--gold-500);
+      color: var(--brown-900);
+      border-color: var(--gold-500);
+      transform: translateY(-3px);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--brown-700);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--white);
+      background: rgba(0,0,0,0.25);
+      transition: all var(--transition-fast);
+      outline: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold-500);
+      box-shadow: 0 0 0 4px rgba(212, 168, 67, 0.15);
+      background: rgba(0,0,0,0.4);
+    }
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold-500);
+      color: var(--brown-900);
+      border: none;
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      letter-spacing: 0.3px;
+    }
+    .form-submit:hover {
+      background: var(--gold-400);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 168, 67, 0.3);
+    }
+
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--brown-900);
+      color: var(--white);
+      padding: 60px 0 0;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer__brand-description {
+      font-size: 14px;
+      color: var(--white-70);
+      line-height: 1.8;
+      margin-top: 16px;
+    }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer__logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .footer__logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .footer__logo-text {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .footer__col h5 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold-400);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer__col ul { list-style: none; }
+    .footer__col ul li { margin-bottom: 10px; }
+    .footer__col ul a {
+      font-size: 14px;
+      color: var(--white-70);
+      transition: color var(--transition-fast);
+    }
+    .footer__col ul a:hover { color: var(--gold-400); }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer__copyright {
+      font-size: 13px;
+      color: var(--white-50);
+    }
+    .footer__socials {
+      display: flex;
+      gap: 12px;
+    }
+    .footer__social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: all var(--transition-normal);
+    }
+    .footer__social-link:hover {
+      background: var(--gold-500);
+      border-color: var(--gold-500);
+      color: var(--brown-900);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 1024px) {
+      .about__grid { grid-template-columns: 1fr; gap: 48px; }
+      .products__grid { grid-template-columns: repeat(2, 1fr); }
+      .why-us__bento-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials__carousel { min-height: 400px; }
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      :root { --section-padding: 64px 0; }
+      .header__nav { 
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(26, 10, 0, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        z-index: 999;
+      }
+      .header__nav.open {
+        display: flex;
+      }
+      .header__nav.open a {
+        font-size: 20px;
+      }
+      .header__menu-toggle { display: flex; z-index: 1001; }
+      .header__menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      .header__menu-toggle.active span:nth-child(2) { opacity: 0; }
+      .hero__content { padding: 0 24px; text-align: center; }
+      .hero__stats { flex-direction: column; gap: 16px; padding: 24px; border-radius: 16px; }
+      .hero__stat { padding: 0; }
+      .hero__stat:not(:last-child)::after { right: 0; top: auto; bottom: -8px; width: 60%; height: 1px; left: 20%; }
+      .hero__buttons { flex-direction: column; align-items: center; width: 100%; }
+      .hero__buttons .btn { width: 100%; }
+      .products__grid { grid-template-columns: 1fr; }
+      .why-us__grid { grid-template-columns: 1fr; }
+      .testimonials__grid { grid-template-columns: 1fr; }
+      .contact { flex-direction: column; min-height: auto; }
+      .contact__map { position: relative; height: 350px; }
+      .contact__overlay { position: relative; }
+      .contact__glass-card { 
+        margin: -60px 24px 40px; 
+        width: calc(100% - 48px);
+        padding: 24px;
+        background: linear-gradient(135deg, rgba(38, 17, 8, 0.98), rgba(138, 28, 28, 0.98));
+        backdrop-filter: blur(20px);
+      }
+      .contact__glass-info { grid-template-columns: 1fr; }
+      .footer__grid { grid-template-columns: 1fr; }
+      .footer__bottom { flex-direction: column; gap: 16px; text-align: center; }
+      
+      /* Timeline Mobile */
+      .about__stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .about__stat { padding: 16px 8px; }
+      .timeline::after { left: 24px; }
+      .timeline-item { width: 100%; padding-left: 64px; padding-right: 0; }
+      .timeline-item--left { text-align: left; }
+      .timeline-item--right { left: 0; }
+      .timeline-item::after, .timeline-item--right::after { left: 16px; right: auto; margin-left: 0; }
+      .timeline-item--left .timeline-card { flex-direction: row; text-align: left; }
+      .timeline-item--left .timeline-year { flex-direction: row; }
+      .timeline-img { width: 80px; height: 80px; }
+
+      /* Process Mobile */
+      .process__line {
+        top: 0;
+        left: 48px;
+        right: auto;
+        width: 4px;
+        height: 100%;
+      }
+      .process__line-fill {
+        width: 100%;
+        height: 0;
+        transition: height 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      .process__wrapper.visible .process__line-fill {
+        height: 100%;
+      }
+      .process__steps {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .process__step {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 24px;
+        padding: 0;
+      }
+      .process__icon {
+        margin: 0;
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+      }
+      
+      /* Testimonials Mobile */
+      .testimonial-card.prev, .testimonial-card.next {
+        opacity: 0;
+        transform: translateX(0) scale(0.8);
+      }
+      .testimonial-card.active {
+        transform: translateX(0) scale(1);
+      }
+      .testimonials__carousel {
+        min-height: 480px;
+      }
+      .testimonial-card {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#hero" class="header__logo">
+        <div class="header__logo-icon"><img src="./assets/logo/logoyen.png" alt="Logo Yến Sào Ngọc Thảo" /></div>
+
+      </a>
+      <nav class="header__nav" aria-label="Menu chính">
+        <a href="#about">Giới Thiệu</a>
+        <a href="#products">Sản Phẩm</a>
+        <a href="#why-us">Tại Sao Chọn Chúng Tôi</a>
+        <a href="#testimonials">Đánh Giá</a>
+        <a href="#contact" class="btn-gold">Liên Hệ Ngay</a>
+      </nav>
+      <button class="header__menu-toggle" aria-label="Mở menu" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <main id="main-content">
+
+  <section class="hero-new" id="hero">
+    <div class="hero-new__content">
+      <div class="hero-new__label">Hơn 20 Năm Uy Tín</div>
+      <h1 class="hero-new__title">Yến Sào<br/><em>Ngọc Thảo</em></h1>
+      <div class="hero-new__slogan">
+        Thành Ý Gửi Trao
+        <span>— Tâm Giao Nhân Khắp</span>
+      </div>
+      
+      <div class="hero-new__btns">
+        <a href="#products" class="btn-gold">Xem Sản Phẩm</a>
+        <a href="#contact" class="btn-gold">Liên Hệ Ngay</a>
+      </div>
+      <div class="hero-new__stats">
+        <div class="stat-mini"><span class="hero-new__stat-mini-num">20+</span><span class="hero-new__stat-mini-lbl">Năm</span></div>
+        <div class="stat-mini"><span class="hero-new__stat-mini-num">100%</span><span class="hero-new__stat-mini-lbl">Tự nhiên</span></div>
+        <div class="stat-mini"><span class="hero-new__stat-mini-num">1000+</span><span class="hero-new__stat-mini-lbl">Khách hàng</span></div>
+      </div>
+    </div>
+    <div class="hero-new__img">
+      <div class="hero-new__img-inner"></div>
+    </div>
+  </section>
+\n  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <div class="section__label">Câu Câu Chuyện Của Chúng Tôi</div>
+        <h2 class="section__title">Hơn 20 Năm Tâm Huyết Với Yến Sào</h2>
+        <div class="section__divider"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1: Left -->
+        <div class="timeline-item timeline-item--left animate-on-scroll">
+          <div class="timeline-card">
+            <img src="./assets/ảnh yến/IMG_7261.jpeg" alt="2006" class="timeline-img" loading="lazy">
+            <div class="timeline-content">
+              <div class="timeline-year">2006</div>
+              <h3 class="timeline-title">Thành lập Ngọc Thảo</h3>
+              <p class="timeline-desc">Bắt đầu từ tình yêu và sự trân trọng đối với sản vật thiên nhiên yến sào nguyên chất.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 2: Right -->
+        <div class="timeline-item timeline-item--right animate-on-scroll">
+          <div class="timeline-card">
+            <img src="./assets/ảnh yến/IMG_7363.jpeg" alt="2010" class="timeline-img" loading="lazy">
+            <div class="timeline-content">
+              <div class="timeline-year">2010</div>
+              <h3 class="timeline-title">Xây Dựng Nhà Yến Đầu Tiên</h3>
+              <p class="timeline-desc">Đầu tư tâm huyết để phát triển hệ thống nhà yến đô thị chuẩn sinh thái tại Nha Trang.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Left -->
+        <div class="timeline-item timeline-item--left animate-on-scroll">
+          <div class="timeline-card">
+            <img src="./assets/ảnh yến/IMG_7372.jpeg" alt="2018" class="timeline-img" loading="lazy">
+            <div class="timeline-content">
+              <div class="timeline-year">2018</div>
+              <h3 class="timeline-title">Mở Tham Quan Trực Tiếp</h3>
+              <p class="timeline-desc">Tiên phong mô hình giúp khách hàng tận mắt chứng kiến quy trình khai thác và sơ chế.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Right -->
+        <div class="timeline-item timeline-item--right animate-on-scroll">
+          <div class="timeline-card">
+            <img src="./assets/ảnh yến/IMG_7591.jpeg" alt="2026" class="timeline-img" loading="lazy">
+            <div class="timeline-content">
+              <div class="timeline-year">2026</div>
+              <h3 class="timeline-title">Vững Bước Phát Triển</h3>
+              <p class="timeline-desc">Hơn 20 năm khẳng định vị thế uy tín hàng đầu trong lòng hàng chục nghìn khách hàng.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__stats animate-on-scroll">
+        <div class="about__stat">
+          <span class="about__stat-number">20+</span>
+          <span class="about__stat-label">Năm Uy Tín</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-number">100%</span>
+          <span class="about__stat-label">Tự Nhiên</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-number">1000+</span>
+          <span class="about__stat-label">Khách Hàng</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <div class="section__label">Bộ Sưu Tập</div>
+        <h2 class="section__title">Sản Phẩm Yến Sào</h2>
+        <div class="section__divider"></div>
+        <p class="section__subtitle">
+          Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng, đảm bảo chất lượng tự nhiên từ nhà yến riêng tại Nha Trang.
+        </p>
+      </div>
+      <div class="products__tabs" role="tablist" aria-label="Danh mục sản phẩm">
+        <button class="products__tab active" role="tab" aria-selected="true" id="tab-all">Tất Cả</button>
+        <button class="products__tab" role="tab" aria-selected="false" id="tab-raw">Yến Thô</button>
+        <button class="products__tab" role="tab" aria-selected="false" id="tab-gift">Hộp Quà Tặng</button>
+        <button class="products__tab" role="tab" aria-selected="false" id="tab-refined">Yến Tinh Chế</button>
+      </div>
+      <div class="products__grid">
+        <!-- Product 1 -->
+        <div class="product-card animate-on-scroll">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image">
+                <img src="./assets/ảnh yến/IMG_7363.jpeg" alt="Yến thô nguyên tổ" loading="lazy" />
+                <span class="product-card__badge">Bán Chạy</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Yến Thô Nguyên Tổ</h3>
+                <p class="product-card__description">Tổ yến nguyên vẹn, chưa qua chế biến. Thu hoạch trực tiếp từ nhà yến Ngọc Thảo tại Nha Trang.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Liên hệ giá</span>
+                  <span class="product-card__action">Chi tiết ⤻</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <ul class="product-card__back-list">
+                <li><strong>🌿 Thành phần</strong> 100% yến thô nguyên chất từ nhà yến</li>
+                <li><strong>📐 Định lượng</strong> Hộp 50g / 100g</li>
+                <li><strong>🍽️ Chế biến</strong> Cần nhặt lông trước khi chưng cách thủy</li>
+                <li><strong>✨ Công dụng</strong> Bồi bổ sức khỏe toàn diện</li>
+              </ul>
+              <a href="#contact" class="product-card__back-btn">Nhận Tư Vấn Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card animate-on-scroll">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image">
+                <img src="./assets/ảnh yến/IMG_7591.jpeg" alt="Hộp quà tặng yến sào" loading="lazy" />
+                <span class="product-card__badge">Quà Tặng</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Hộp Quà Cao Cấp</h3>
+                <p class="product-card__description">Set quà sang trọng gồm yến thô, đường phèn và táo đỏ — trong hộp đỏ vàng quý phái.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Liên hệ giá</span>
+                  <span class="product-card__action">Chi tiết ⤻</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <ul class="product-card__back-list">
+                <li><strong>🌿 Thành phần</strong> Yến tuyển chọn, táo đỏ, đường phèn</li>
+                <li><strong>📐 Quy cách</strong> Hộp quà cứng cáp sang trọng</li>
+                <li><strong>🎁 Phù hợp</strong> Biếu tặng đối tác, người thân dịp Lễ Tết</li>
+              </ul>
+              <a href="#contact" class="product-card__back-btn">Nhận Tư Vấn Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card animate-on-scroll">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image">
+                <img src="./assets/ảnh yến/IMG_7594.jpeg" alt="Yến sợi cao cấp" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Yến Sợi Cao Cấp</h3>
+                <p class="product-card__description">Sợi yến rời tiện lợi, dễ chế biến. Thích hợp chưng với đường phèn, táo đỏ hoặc hạt sen.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Liên hệ giá</span>
+                  <span class="product-card__action">Chi tiết ⤻</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <ul class="product-card__back-list">
+                <li><strong>🌿 Thành phần</strong> Yến vụn sợi 100% tự nhiên nguyên chất</li>
+                <li><strong>📐 Định lượng</strong> Hộp tiện lợi 50g / 100g</li>
+                <li><strong>🍽️ Chế biến</strong> Chưng nhanh, tiết kiệm thời gian</li>
+              </ul>
+              <a href="#contact" class="product-card__back-btn">Nhận Tư Vấn Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card animate-on-scroll">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image">
+                <img src="./assets/ảnh yến/IMG_7320.jpg" alt="Yến tinh chế" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Yến Tinh Chế</h3>
+                <p class="product-card__description">Yến đã qua quá trình làm sạch lông tỉ mỉ, sẵn sàng chưng ngay vô cùng tiện lợi.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Liên hệ giá</span>
+                  <span class="product-card__action">Chi tiết ⤻</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <ul class="product-card__back-list">
+                <li><strong>🌿 Thành phần</strong> Yến tinh chế sạch lông 100%</li>
+                <li><strong>📐 Định lượng</strong> Hộp 50g / 100g</li>
+                <li><strong>🍽️ Cách dùng</strong> Chưng ngay không cần nhặt lại lông</li>
+              </ul>
+              <a href="#contact" class="product-card__back-btn">Nhận Tư Vấn Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card animate-on-scroll">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image">
+                <img src="./assets/ảnh yến/IMG_9319.jpeg" alt="Set quà tặng đặc biệt" loading="lazy" />
+                <span class="product-card__badge">Đặc Biệt</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Set Quà Đặc Biệt</h3>
+                <p class="product-card__description">Bộ quà tặng sang trọng dành trọn vẹn dành cho người thân, đối tác quan trọng.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Liên hệ giá</span>
+                  <span class="product-card__action">Chi tiết ⤻</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <ul class="product-card__back-list">
+                <li><strong>🎁 Phù hợp</strong> Quà biếu khách VIP, quà biếu Lễ, siêu cao cấp</li>
+                <li><strong>🌟 Bao bì</strong> Hộp gỗ khắc tinh xảo hoặc lụa cao cấp</li>
+                <li><strong>✨ Chất lượng</strong> Những tai yến to, đẹp nhất được chắt lọc</li>
+              </ul>
+              <a href="#contact" class="product-card__back-btn">Nhận Tư Vấn Ngay</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card animate-on-scroll">
+          <div class="product-card__inner">
+            <div class="product-card__front">
+              <div class="product-card__image">
+                <img src="./assets/ảnh yến/IMG_7365.jpg" alt="Yến thô cao cấp" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Yến Thô Đảo</h3>
+                <p class="product-card__description">Tổ yến chất lượng cao giữ trọn vi chất. Được khai thác chuyên nghiệp từ yến đảo.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Liên hệ giá</span>
+                  <span class="product-card__action">Chi tiết ⤻</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__back">
+              <ul class="product-card__back-list">
+                <li><strong>🌿 Thành phần</strong> Yến thô tự nhiên nguyên thủy</li>
+                <li><strong>💎 Đặc điểm</strong> Màng mỏng, hương tanh thanh khiết</li>
+                <li><strong>✨ Công dụng</strong> Cực kỳ tốt để phục hồi sau sinh tẩm bổ</li>
+              </ul>
+              <a href="#contact" class="product-card__back-btn">Nhận Tư Vấn Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <div class="section__label">Quy Trình Chế Biến</div>
+        <h2 class="section__title">Từ Nhà Yến Đến Tay Bạn</h2>
+        <div class="section__divider"></div>
+        <p class="section__subtitle">
+          Quy trình tinh chế khép kín, giữ trọn 100% vi chất tự nhiên quý giá.
+        </p>
+      </div>
+
+      <div class="process__wrapper animate-on-scroll">
+        <div class="process__line">
+          <div class="process__line-fill"></div>
+        </div>
+        <div class="process__steps">
+          <!-- Step 1 -->
+          <div class="process__step">
+            <div class="process__icon">
+              🏠
+              <div class="process__step-num">1</div>
+            </div>
+            <h3 class="process__title">Khai Thác</h3>
+            <p class="process__desc">Yến chim tự bay về nhà làm tổ tự nhiên tại Nha Trang.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="process__step">
+            <div class="process__icon">
+              ✋
+              <div class="process__step-num">2</div>
+            </div>
+            <h3 class="process__title">Thu Hoạch</h3>
+            <p class="process__desc">Khai thác thủ công, nhẹ nhàng chọn lọc nguyên tổ.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="process__step">
+            <div class="process__icon">
+              🧹
+              <div class="process__step-num">3</div>
+            </div>
+            <h3 class="process__title">Làm Sạch</h3>
+            <p class="process__desc">Thợ lành nghề tỉ mỉ gắp nhặt sạch lông yến từng sợi.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="process__step">
+            <div class="process__icon">
+              📦
+              <div class="process__step-num">4</div>
+            </div>
+            <h3 class="process__title">Đóng Gói</h3>
+            <p class="process__desc">Đóng hộp tiệt trùng cao cấp sang trọng chuẩn xuất khẩu.</p>
+          </div>
+          <!-- Step 5 -->
+          <div class="process__step">
+            <div class="process__icon">
+              🤝
+              <div class="process__step-num">5</div>
+            </div>
+            <h3 class="process__title">Giao Hàng</h3>
+            <p class="process__desc">Giao tận nơi nhanh chóng, bảo hiểm an toàn sản phẩm.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY US ========== -->
+  <section class="section why-us" id="why-us">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <div class="section__label">Cam Kết Chất Lượng</div>
+        <h2 class="section__title">Tại Sao Chọn Ngọc Thảo?</h2>
+        <div class="section__divider"></div>
+        <p class="section__subtitle">
+          Chúng tôi không chỉ bán yến sào — chúng tôi mang đến trải nghiệm và niềm tin cho khách hàng.
+        </p>
+      </div>
+      <div class="why-us__bento-grid">
+        <!-- Card 1: Large -->
+        <div class="why-us__card why-us__card--large animate-on-scroll">
+          <div class="why-us__card-content">
+            <div class="why-us__icon">🏠</div>
+            <h4>Nhà Yến Riêng</h4>
+            <p>Sở hữu nhà yến gốc tại Nha Trang. Chủ động tuyệt đối nguồn cung và cam kết chất lượng từng tổ yến.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="why-us__card animate-on-scroll">
+          <div class="why-us__card-content">
+            <div class="why-us__icon">🌿</div>
+            <h4>100% Tự Nhiên</h4>
+            <p>Thu hoạch thủ công, hoàn toàn không hóa chất, an toàn tuyệt đối cho sức khỏe.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="why-us__card animate-on-scroll">
+          <div class="why-us__card-content">
+            <div class="why-us__icon">👁️</div>
+            <h4>Tham Quan Trực Tiếp</h4>
+            <p>Khách hàng được quyền xem trực tiếp không gian nhà yến và xưởng sơ chế.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="why-us__card animate-on-scroll">
+          <div class="why-us__card-content">
+            <div class="why-us__icon">⭐</div>
+            <h4>20+ Năm Uy Tín</h4>
+            <p>Từ năm 2006, chúng tôi đã phục vụ hàng chục ngàn khách hàng trên toàn quốc.</p>
+          </div>
+        </div>
+        <!-- Card 5 (Stats Counter) -->
+        <div class="why-us__card why-us__card--stats animate-on-scroll">
+          <div class="why-us__card-content">
+            <div class="counter" data-target="10000">10000</div>
+            <p>Khách hàng thân thiết tin dùng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <div class="section__label">Khách Hàng Nói Gì</div>
+        <h2 class="section__title">Đánh Giá Từ Khách Hàng</h2>
+        <div class="section__divider"></div>
+        <p class="section__subtitle">
+          Sự tin tưởng của khách hàng là động lực lớn nhất để chúng tôi không ngừng nâng cao chất lượng.
+        </p>
+      </div>
+      <div class="testimonials__carousel" id="testimonial-carousel">
+        <div class="testimonial-card prev">
+          <div class="testimonial-card__quote-mark">"</div>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span>
+          </div>
+          <p class="testimonial-card__text">
+            "Yến sào Ngọc Thảo chất lượng thật sự. Mình đã dùng cho mẹ bầu và em bé, thấy sức khỏe cải thiện rõ rệt. Đặc biệt được tham quan nhà yến rất ấn tượng!"
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">TL</div>
+            <div class="testimonial-card__name">Chị Thanh Lan</div>
+            <div class="testimonial-card__location">TP. Hồ Chí Minh</div>
+          </div>
+        </div>
+        <div class="testimonial-card active">
+          <div class="testimonial-card__quote-mark">"</div>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span>
+          </div>
+          <p class="testimonial-card__text">
+            "Mua yến ở đây hơn 5 năm rồi. Chất lượng luôn ổn định, giá cả hợp lý. Set quà tặng đẹp lắm, tặng sếp và đối tác ai cũng khen ngợi."
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MH</div>
+            <div class="testimonial-card__name">Anh Minh Hoàng</div>
+            <div class="testimonial-card__location">Hà Nội</div>
+          </div>
+        </div>
+        <div class="testimonial-card next">
+          <div class="testimonial-card__quote-mark">"</div>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span><span class="testimonial-card__star">★</span>
+          </div>
+          <p class="testimonial-card__text">
+            "Đi du lịch Nha Trang được bạn giới thiệu đến tham quan nhà yến Ngọc Thảo. Rất bất ngờ với quy mô và sự chuyên nghiệp. Mua về dùng quá hài lòng!"
+          </p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">HN</div>
+            <div class="testimonial-card__name">Chị Hồng Nhung</div>
+            <div class="testimonial-card__location">Đà Nẵng</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__pagination" id="testimonial-dots">
+        <span class="testimonials__dot" onclick="setTestimonial(0)"></span>
+        <span class="testimonials__dot active" onclick="setTestimonial(1)"></span>
+        <span class="testimonials__dot" onclick="setTestimonial(2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <!-- Full-width Map Background -->
+    <div class="contact__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.0!2d109.1866704!3d12.2648533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31705d0a3ea414e7%3A0xbb80596f024544e7!2sY%E1%BA%BFn%20s%C3%A0o%20Ng%E1%BB%8Dc%20Th%E1%BA%A3o%20Kh%C3%A1nh%20H%C3%B2a!5e0!3m2!1svi!2svn!4v1713168000000!5m2!1svi!2svn"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Bản đồ Yến Sào Ngọc Thảo Khánh Hòa"
+      ></iframe>
+    </div>
+
+    <!-- Floating Glass Form Overlay -->
+    <div class="container contact__overlay">
+      <div class="contact__glass-card animate-on-scroll">
+        <h3>Kết Nối Với Chúng Tôi</h3>
+        <p>Gửi Yêu Cầu Tư Vấn Mua Hàng</p>
+
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn *" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Số Điện Thoại (VD: 0919217882) *" required pattern="[0-9]{10,11}" aria-required="true" />
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Bạn quan tâm tới sản phẩm nào? Hoặc muốn đặt lịch tham quan nhà yến?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Gửi Yêu Cầu Tư Vấn</button>
+        </form>
+
+        <div class="contact__glass-info">
+          <div class="contact__info-item"><span>📍</span> <strong>Nha Trang, Khánh Hòa</strong></div>
+          <div class="contact__info-item"><span>📞</span> <a href="tel:0919217882">0919 217 882</a></div>
+          <div class="contact__info-item"><span>✉️</span> <a href="mailto:yensaongocthao@gmail.com">yensaongocthao@gmail.com</a></div>
+          <div class="contact__info-item"><span>💬</span> <a href="#">Zalo Official</a></div>
+        </div>
+
+        <div class="contact__glass-socials">
+          <a href="https://www.facebook.com/yensaongocthao" target="_blank" class="contact__social" title="Facebook">📘</a>
+          <a href="#" class="contact__social" title="TikTok">🎵</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========== FOOTER ========== -->
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">
+            <div class="footer__logo-icon"><img src="./assets/logo/logoyen.png" alt="Logo Yến Sào Ngọc Thảo" /></div>
+            <div class="footer__logo-text">Yến Sào Ngọc Thảo</div>
+          </div>
+          <p class="footer__brand-description">
+            Hơn 20 năm hình thành và khẳng định thương hiệu yến sào chất lượng tại Nha Trang, Khánh Hòa. Chúng tôi cam kết mang đến những sản phẩm yến sào 100% tự nhiên từ nhà yến riêng.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h5>Liên Kết</h5>
+          <ul>
+            <li><a href="#about">Giới Thiệu</a></li>
+            <li><a href="#products">Sản Phẩm</a></li>
+            <li><a href="#why-us">Cam Kết</a></li>
+            <li><a href="#testimonials">Đánh Giá</a></li>
+            <li><a href="#contact">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Sản Phẩm</h5>
+          <ul>
+            <li><a href="#products">Yến Thô Nguyên Tổ</a></li>
+            <li><a href="#products">Yến Sợi Cao Cấp</a></li>
+            <li><a href="#products">Yến Tinh Chế</a></li>
+            <li><a href="#products">Hộp Quà Tặng</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Liên Hệ</h5>
+          <ul>
+            <li><a href="tel:02583821494">📞 (0258) 3821 494</a></li>
+            <li><a href="tel:0919217882">📱 0919 217 882</a></li>
+            <li><a href="mailto:yensaongocthao@gmail.com">✉️ yensaongocthao@gmail.com</a></li>
+            <li><a href="#">📍 Nha Trang, Khánh Hòa</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          © 2026 Yến Sào Ngọc Thảo Khánh Hòa. All rights reserved.
+        </div>
+        <div class="footer__socials">
+          <a href="https://www.facebook.com/yensaongocthao" target="_blank" class="footer__social-link" title="Facebook">📘</a>
+          <a href="#" class="footer__social-link" title="TikTok">🎵</a>
+          <a href="#" class="footer__social-link" title="Zalo">💬</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.header__menu-toggle');
+    const navMenu = document.querySelector('.header__nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Đóng menu' : 'Mở menu');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    // Close mobile menu on nav link click
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Mở menu');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Scroll animation observer with proper stagger
+    let animationCounter = 0;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const delay = animationCounter * 120;
+          animationCounter++;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+            
+            // Trigger counter animation if it has a counter child
+            const counterEl = entry.target.querySelector('.counter');
+            if (counterEl && !counterEl.classList.contains('counted')) {
+              counterEl.classList.add('counted');
+              const target = +counterEl.getAttribute('data-target');
+              const duration = 2000;
+              const step = target / (duration / 16);
+              let current = 0;
+              const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                  counterEl.innerText = Math.ceil(current).toLocaleString();
+                  requestAnimationFrame(updateCounter);
+                } else {
+                  counterEl.innerText = target.toLocaleString();
+                }
+              };
+              updateCounter();
+            }
+          }, delay);
+          observer.unobserve(entry.target);
+          // Reset counter after a batch completes
+          clearTimeout(window._animResetTimer);
+          window._animResetTimer = setTimeout(() => { animationCounter = 0; }, 600);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Form submit mockup
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      const originalText = btn.textContent;
+      btn.textContent = '✓ Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.';
+      btn.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 3000);
+    }
+
+    // Product tabs with ARIA roles
+    document.querySelectorAll('.products__tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.products__tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+      });
+    });
+
+    // Testimonials Carousel
+    const testimonialCards = document.querySelectorAll('#testimonial-carousel .testimonial-card');
+    const testimonialDots = document.querySelectorAll('#testimonial-dots .testimonials__dot');
+    let currentTestimonial = 1; // Middle one starts active (index 1)
+    let testimonialInterval;
+
+    function updateTestimonialDOM() {
+      testimonialCards.forEach((card, i) => {
+        card.className = 'testimonial-card'; // override classes
+        if (i === currentTestimonial) card.classList.add('active');
+        else if (i === (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length) card.classList.add('prev');
+        else if (i === (currentTestimonial + 1) % testimonialCards.length) card.classList.add('next');
+      });
+      testimonialDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentTestimonial);
+      });
+    }
+
+    function setTestimonial(index) {
+      currentTestimonial = index;
+      updateTestimonialDOM();
+      resetTestimonialInterval();
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+      updateTestimonialDOM();
+    }
+
+    function resetTestimonialInterval() {
+      clearInterval(testimonialInterval);
+      testimonialInterval = setInterval(nextTestimonial, 5000);
+    }
+
+    // Initialize
+    updateTestimonialDOM();
+    resetTestimonialInterval();
+
+    // Smooth scroll for anchor links (fallback)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

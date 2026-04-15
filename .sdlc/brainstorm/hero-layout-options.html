@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hero Layout Options — Yến Sào Ngọc Thảo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f0ea;
+    color: #2d1810;
+    padding: 40px 24px;
+  }
+  .page-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #3d2b1f;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #7a5c4a;
+    margin-bottom: 48px;
+  }
+  .options-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .option-block {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  }
+  .option-block:hover {
+    border-color: #B8860B;
+    box-shadow: 0 16px 60px rgba(184,134,11,0.18);
+    transform: translateY(-4px);
+  }
+  .option-block.selected {
+    border-color: #B8860B;
+    box-shadow: 0 0 0 4px rgba(184,134,11,0.25);
+  }
+  .option-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 28px 0;
+  }
+  .option-badge {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B8860B, #D4A843);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .option-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d1810;
+  }
+  .option-desc {
+    font-size: 13px;
+    color: #7a5c4a;
+    margin-left: 48px;
+    padding: 4px 28px 16px;
+  }
+  .mockup-wrap {
+    margin: 0 28px 28px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e8ddd5;
+  }
+
+  /* ===== LAYOUT A: SPLIT (60/40) ===== */
+  .layout-a {
+    display: flex;
+    height: 420px;
+    background: #FEFCF3;
+  }
+  .layout-a__img {
+    width: 58%;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .layout-a__img-inner {
+    width: 100%; height: 100%;
+    background: url('../assets/ảnh yến/IMG_9553.jpeg') center/cover no-repeat;
+    transition: transform 0.6s ease;
+  }
+  .option-block:hover .layout-a__img-inner { transform: scale(1.04); }
+  .layout-a__img::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0; width: 80px;
+    background: linear-gradient(to right, transparent, #FEFCF3);
+  }
+  .layout-a__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 40px 48px 20px;
+  }
+  .layout-a__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #B8860B;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .layout-a__label::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: #B8860B;
+    display: inline-block;
+  }
+  .layout-a__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #2d1810;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .layout-a__title em {
+    font-style: italic;
+    color: #B8860B;
+  }
+  .layout-a__sub {
+    font-size: 14px;
+    color: #7a5c4a;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 280px;
+  }
+  .layout-a__btns { display: flex; gap: 12px; }
+  .btn-gold {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #B8860B, #D4A843);
+    color: white;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-outline-gold {
+    padding: 12px 24px;
+    background: transparent;
+    color: #B8860B;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid #B8860B;
+    cursor: pointer;
+  }
+  .layout-a__stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(184,134,11,0.2);
+  }
+  .stat-mini { text-align: center; }
+  .stat-mini-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #B8860B;
+    display: block;
+  }
+  .stat-mini-lbl {
+    font-size: 11px;
+    color: #7a5c4a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ===== LAYOUT B: CENTERED OVERLAY ===== */
+  .layout-b {
+    position: relative;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .layout-b__bg {
+    position: absolute;
+    inset: 0;
+    background: url('../assets/ảnh yến/IMG_9558.jpeg') center/cover no-repeat;
+  }
+  .layout-b__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(254,252,243,0.92) 0%,
+      rgba(254,252,243,0.78) 40%,
+      rgba(254,252,243,0.88) 100%);
+  }
+  .layout-b__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    padding: 0 32px;
+  }
+  .layout-b__ornament {
+    font-size: 32px;
+    margin-bottom: 12px;
+    opacity: 0.6;
+  }
+  .layout-b__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #B8860B;
+    margin-bottom: 16px;
+  }
+  .layout-b__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #2d1810;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .layout-b__title span {
+    display: block;
+    font-style: italic;
+    color: #8B6914;
+  }
+  .layout-b__divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #B8860B, #D4A843);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+  .layout-b__sub {
+    font-size: 15px;
+    color: #5C4033;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .layout-b__btns { display: flex; gap: 12px; justify-content: center; }
+
+  /* ===== LAYOUT C: MAGAZINE ASYMMETRIC ===== */
+  .layout-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 420px;
+    background: #FEFCF3;
+  }
+  .layout-c__img-main {
+    grid-column: 1 / 3;
+    position: relative;
+    overflow: hidden;
+  }
+  .layout-c__img-main-inner {
+    width: 100%; height: 100%;
+    background: url('../assets/ảnh yến/IMG_9573.jpeg') center/cover no-repeat;
+    transition: transform 0.6s;
+  }
+  .option-block:hover .layout-c__img-main-inner { transform: scale(1.04); }
+  .layout-c__img-small {
+    position: absolute;
+    bottom: 20px; right: -20px;
+    width: 140px; height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 2;
+  }
+  .layout-c__img-small-inner {
+    width: 100%; height: 100%;
+    background: url('../assets/ảnh yến/IMG_7363.jpeg') center/cover no-repeat;
+  }
+  .layout-c__panel {
+    background: #FEFCF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 32px;
+    border-left: 1px solid #e8ddd5;
+  }
+  .layout-c__year-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(184,134,11,0.1);
+    color: #8B6914;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  .layout-c__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2d1810;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .layout-c__title span {
+    display: block;
+    font-style: italic;
+    color: #8B6914;
+    font-size: 34px;
+  }
+  .layout-c__line { width: 40px; height: 2px; background: #B8860B; margin-bottom: 16px; border-radius: 2px; }
+  .layout-c__sub {
+    font-size: 13px;
+    color: #7a5c4a;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .layout-c__btns { display: flex; flex-direction: column; gap: 10px; }
+  .btn-gold-c {
+    padding: 11px 20px;
+    background: linear-gradient(135deg, #8B0000, #C41E3A);
+    color: white;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  .btn-link-c {
+    font-size: 12px;
+    color: #8B6914;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  .layout-c__caption-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 20px 24px;
+    background: linear-gradient(to top, rgba(26,10,0,0.7), transparent);
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .selected-badge {
+    display: none;
+    background: #B8860B;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 50px;
+    margin-left: auto;
+  }
+  .option-block.selected .selected-badge { display: block; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Hero Section — Chọn Layout</h1>
+<p class="page-subtitle">Ba hướng thiết kế theo phong cách <strong>Natural Elegant</strong> — click vào layout bạn thích nhất</p>
+
+<div class="options-wrap">
+
+  <!-- OPTION A -->
+  <div class="option-block" onclick="selectOption(this, 'A')">
+    <div class="option-label">
+      <div class="option-badge">A</div>
+      <div>
+        <div class="option-name">Split Layout — Ảnh trái, nội dung phải</div>
+      </div>
+      <div class="selected-badge">✓ Đã chọn</div>
+    </div>
+    <p class="option-desc">Ảnh thiên nhiên lớn bên trái (60%), panel trắng/kem bên phải với headline + CTA. Cân bằng giữa visual và text. Layout phổ biến của các thương hiệu thực phẩm cao cấp.</p>
+    <div class="mockup-wrap">
+      <div class="layout-a">
+        <div class="layout-a__img">
+          <div class="layout-a__img-inner"></div>
+        </div>
+        <div class="layout-a__content">
+          <div class="layout-a__label">Hơn 20 Năm Uy Tín</div>
+          <h2 class="layout-a__title">Yến Sào<br/><em>Ngọc Thảo</em></h2>
+          <p class="layout-a__sub">Tổ yến 100% tự nhiên từ nhà yến riêng tại Nha Trang, Khánh Hòa.</p>
+          <div class="layout-a__btns">
+            <button class="btn-gold">Xem Sản Phẩm</button>
+            <button class="btn-outline-gold">Liên hệ</button>
+          </div>
+          <div class="layout-a__stats">
+            <div class="stat-mini"><span class="stat-mini-num">20+</span><span class="stat-mini-lbl">Năm</span></div>
+            <div class="stat-mini"><span class="stat-mini-num">100%</span><span class="stat-mini-lbl">Tự nhiên</span></div>
+            <div class="stat-mini"><span class="stat-mini-num">1000+</span><span class="stat-mini-lbl">Khách hàng</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="option-block" onclick="selectOption(this, 'B')">
+    <div class="option-label">
+      <div class="option-badge">B</div>
+      <div>
+        <div class="option-name">Centered Overlay — Ảnh nền mờ, nội dung giữa</div>
+      </div>
+      <div class="selected-badge">✓ Đã chọn</div>
+    </div>
+    <p class="option-desc">Ảnh phủ full width với overlay kem mờ, toàn bộ text nằm giữa trang. Điểm nhấn là typography lớn theo phong cách editorial. Rất clean và sang trọng.</p>
+    <div class="mockup-wrap">
+      <div class="layout-b">
+        <div class="layout-b__bg"></div>
+        <div class="layout-b__overlay"></div>
+        <div class="layout-b__content">
+          <div class="layout-b__ornament">✦</div>
+          <div class="layout-b__label">Khánh Hòa · Nha Trang · Tự Nhiên</div>
+          <h2 class="layout-b__title">Yến Sào<span>Ngọc Thảo</span></h2>
+          <div class="layout-b__divider"></div>
+          <p class="layout-b__sub">Thành Ý Gửi Trao — Tâm Giao Nhân Khắp</p>
+          <div class="layout-b__btns">
+            <button class="btn-gold">Xem Sản Phẩm</button>
+            <button class="btn-outline-gold">Tham Quan Nhà Yến</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="option-block" onclick="selectOption(this, 'C')">
+    <div class="option-label">
+      <div class="option-badge">C</div>
+      <div>
+        <div class="option-name">Magazine Grid — Lưới bất đối xứng với ảnh xếp chồng</div>
+      </div>
+      <div class="selected-badge">✓ Đã chọn</div>
+    </div>
+    <p class="option-desc">Hai cột ảnh chiếm 2/3 bên trái, panel trắng bên phải. Ảnh nhỏ xếp chồng tạo chiều sâu. Phong cách editorial/luxury của các thương hiệu thực phẩm Nhật–Pháp.</p>
+    <div class="mockup-wrap">
+      <div class="layout-c">
+        <div class="layout-c__img-main">
+          <div class="layout-c__img-main-inner"></div>
+          <div class="layout-c__img-small"><div class="layout-c__img-small-inner"></div></div>
+          <div class="layout-c__caption-bar">Nhà Yến Ngọc Thảo · Nha Trang</div>
+        </div>
+        <div class="layout-c__panel">
+          <div class="layout-c__year-tag">✦ Est. 2006</div>
+          <h2 class="layout-c__title">Yến Sào<span>Ngọc Thảo</span></h2>
+          <div class="layout-c__line"></div>
+          <p class="layout-c__sub">Tổ yến khai thác thủ công, 100% tự nhiên, từ nhà yến riêng Khánh Hòa — hơn 20 năm uy tín.</p>
+          <div class="layout-c__btns">
+            <button class="btn-gold-c">Xem Sản Phẩm</button>
+            <span class="btn-link-c">↓ Tham quan nhà yến</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function selectOption(el, choice) {
+    document.querySelectorAll('.option-block').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
