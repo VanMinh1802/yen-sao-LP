@@ -1,26 +1,145 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+  /* Brand Colors */
+  --color-red-900: #5C0A0A;
+  --color-red-800: #7A1010;
+  --color-red-700: #8B0000;
+  --color-red-600: #A31B1B;
+  --color-red-500: #C41E3A;
+  --color-red-400: #E8384F;
+  
+  --color-gold-700: #8B6914;
+  --color-gold-600: #B8860B;
+  --color-gold-500: #D4A843;
+  --color-gold-400: #E8C55A;
+  --color-gold-300: #FFD700;
+  --color-gold-200: #FFE44D;
+  
+  --color-cream-100: #FEFCF3;
+  --color-cream-200: #FFF8F0;
+  --color-cream-300: #FFF5E6;
+  --color-cream-400: #FFECD2;
+  
+  --color-brown-900: #1A0A00;
+  --color-brown-800: #2D1810;
+  --color-brown-700: #3D2B1F;
+  --color-brown-600: #5C4033;
+  
+  /* Opacity Colors */
+  --color-white-90: rgba(255,255,255,0.9);
+  --color-white-70: rgba(255,255,255,0.7);
+  --color-white-50: rgba(255,255,255,0.5);
+  --color-white-20: rgba(255,255,255,0.2);
+  --color-black-80: rgba(0,0,0,0.8);
+  --color-black-50: rgba(0,0,0,0.5);
+  --color-black-30: rgba(0,0,0,0.3);
+  --color-black-10: rgba(0,0,0,0.1);
+
+  /* Fonts */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-display: var(--font-display);
+
+  /* Shadcn standard theme variables config mapped to brand colors or defaults */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+
+  /* Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0); }
+    50% { box-shadow: 0 0 15px 0 rgba(212, 168, 67, 0.6); }
+  }
+  @keyframes spin-dashed {
+    100% { transform: rotate(360deg); }
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+:root {
+  --background: #FEFCF3; /* cream-100 */
+  --foreground: #1A0A00; /* brown-900 */
+  --card: #FFF8F0; /* cream-200 */
+  --card-foreground: #1A0A00;
+  --popover: #FFF8F0;
+  --popover-foreground: #1A0A00;
+  --primary: #C41E3A; /* red-500 */
+  --primary-foreground: #FFFFFF;
+  --secondary: #D4A843; /* gold-500 */
+  --secondary-foreground: #1A0A00;
+  --muted: #FFECD2; /* cream-400 */
+  --muted-foreground: #5C4033; /* brown-600 */
+  --accent: #FFECD2;
+  --accent-foreground: #1A0A00;
+  --destructive: #A31B1B;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(92, 64, 51, 0.2);
+  --input: rgba(92, 64, 51, 0.2);
+  --ring: #D4A843; /* gold-500 */
+  --radius: 0.625rem;
 }
 
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+.dark {
+  --background: #1A0A00; /* brown-900 */
+  --foreground: #FFFFFF;
+  --card: #2D1810; /* brown-800 */
+  --card-foreground: #FFFFFF;
+  --popover: #2D1810;
+  --popover-foreground: #FFFFFF;
+  --primary: #E8384F; /* red-400 */
+  --primary-foreground: #FFFFFF;
+  --secondary: #E8C55A; /* gold-400 */
+  --secondary-foreground: #1A0A00;
+  --muted: #3D2B1F; /* brown-700 */
+  --muted-foreground: rgba(255,255,255,0.7);
+  --accent: #3D2B1F;
+  --accent-foreground: #FFFFFF;
+  --destructive: #E8384F;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(255,255,255,0.1);
+  --input: rgba(255,255,255,0.1);
+  --ring: #E8C55A;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-body;
+  }
 }
