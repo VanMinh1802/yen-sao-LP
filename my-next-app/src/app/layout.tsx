@@ -115,7 +115,6 @@ export default function RootLayout({
     <html lang="vi" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="preload" href="/images/hero/hinh-yen.webp" as="image" fetchPriority="high" />
         <script
           type="application/ld+json"
