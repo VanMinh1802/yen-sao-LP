@@ -31,7 +31,7 @@ export function ContactInfo() {
           const inner = (
             <div className="flex items-start gap-2 text-white/80 hover:text-white transition-colors group min-w-0">
               <span className="text-base shrink-0 mt-0.5 group-hover:scale-110 transition-transform">{item.icon}</span>
-              <span className="text-sm font-medium leading-snug break-words">{item.content}</span>
+              <span className="flex-1 min-w-0 text-sm font-medium leading-snug break-words">{item.content}</span>
             </div>
           );
 
