@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main id="main-content" className="flex flex-col min-h-screen">
       {/* 
         Feature assembly points will be filled in subsequent tasks 
       */}

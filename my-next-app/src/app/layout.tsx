@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fontHeading, fontBody, fontDisplay } from "@/lib/fonts";
 import "./globals.css";
 import { Providers } from "./providers";
+import { Header, Footer, SkipLink } from "@/features/layout";
 
 export const metadata: Metadata = {
   title: "Yến Sào Ngọc Thảo Khánh Hòa — 20 Năm Uy Tín",
@@ -26,7 +27,10 @@ export default function RootLayout({
       </head>
       <body className={`${fontHeading.variable} ${fontBody.variable} ${fontDisplay.variable} antialiased`}>
         <Providers>
+          <SkipLink />
+          <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
