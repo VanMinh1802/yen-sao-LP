@@ -24,23 +24,28 @@ const socialLinks: SocialLink[] = [
 
 export function ContactInfo() {
   return (
-    <div className="mt-8 pt-6 border-t border-white/10">
-      {/* Contact Info Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+    <div className="mt-6 pt-6 border-t border-white/10">
+      {/* Contact Info — 2-column grid */}
+      <div className="grid grid-cols-2 gap-4 mb-6">
         {contactItems.map((item, i) => {
-          const content = (
-            <div className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
-              <span className="text-lg shrink-0 group-hover:scale-110 transition-transform">{item.icon}</span>
-              <span className="text-sm leading-tight">{item.content}</span>
+          const inner = (
+            <div className="flex items-start gap-2 text-white/80 hover:text-white transition-colors group">
+              <span className="text-base shrink-0 mt-0.5 group-hover:scale-110 transition-transform">{item.icon}</span>
+              <span className="text-sm font-medium leading-snug break-words">{item.content}</span>
             </div>
           );
 
           return item.href ? (
-            <a key={i} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}>
-              {content}
+            <a
+              key={i}
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            >
+              {inner}
             </a>
           ) : (
-            <div key={i}>{content}</div>
+            <div key={i}>{inner}</div>
           );
         })}
       </div>
@@ -54,7 +59,7 @@ export function ContactInfo() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.label}
-            className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-lg hover:bg-gold-500 hover:text-brown-900 hover:-translate-y-[3px] transition-all duration-300"
+            className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/10 flex items-center justify-center text-lg hover:bg-gold-500 hover:text-brown-900 hover:border-gold-500 hover:-translate-y-[3px] shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300"
           >
             {link.icon}
           </a>

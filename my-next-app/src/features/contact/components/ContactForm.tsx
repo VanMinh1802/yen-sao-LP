@@ -37,20 +37,20 @@ export function ContactForm() {
   };
 
   const inputClasses =
-    "w-full bg-black/25 border border-white/15 rounded-xl px-4 py-3 text-white placeholder:text-white/40 outline-none transition-all duration-300 focus:border-gold-500 focus:shadow-[0_0_0_3px_rgba(212,168,67,0.15)] focus:bg-black/35 text-sm";
+    "w-full bg-black/25 border border-white/15 rounded-xl px-[18px] py-[14px] text-white placeholder:text-white/40 outline-none transition-all duration-200 focus:border-gold-500 focus:shadow-[0_0_0_4px_rgba(212,168,67,0.15)] focus:bg-black/40 text-[15px]";
 
   return (
-    <div className="w-full max-w-[480px] bg-gradient-to-br from-[rgba(38,17,8,0.95)] to-[rgba(138,28,28,0.95)] backdrop-blur-2xl border border-gold-500/60 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.4),_inset_0_1px_0_rgba(212,168,67,0.15)] p-8 md:p-10 relative z-20">
+    <div className="w-full max-w-[480px] bg-gradient-to-br from-[rgba(38,17,8,0.95)] to-[rgba(138,28,28,0.95)] backdrop-blur-2xl border border-gold-500 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.4),_inset_0_0_0_1px_rgba(212,168,67,0.3)] p-10 relative z-20">
       {/* Card Header */}
-      <h3 className="text-2xl md:text-[28px] font-bold text-gold-400 mb-1">
+      <h3 className="text-[28px] font-bold text-gold-400 mb-2 leading-tight">
         Kết Nối Với Chúng Tôi
       </h3>
-      <p className="text-white/70 text-[15px] mb-8">
+      <p className="text-white/70 text-[15px] mb-6">
         Gửi Yêu Cầu Tư Vấn Mua Hàng
       </p>
 
       {/* Form */}
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         {/* Name */}
         <div>
           <input
@@ -89,10 +89,10 @@ export function ContactForm() {
         <div>
           <textarea
             {...register("message")}
-            rows={3}
+            rows={4}
             placeholder="Bạn quan tâm tới sản phẩm nào? Hoặc muốn đặt lịch tham quan nhà yến?"
             aria-label="Lời nhắn"
-            className={cn(inputClasses, "resize-none")}
+            className={cn(inputClasses, "resize-y min-h-[120px]")}
           />
         </div>
 
@@ -101,17 +101,17 @@ export function ContactForm() {
           type="submit"
           disabled={isSubmitting || isSuccess}
           className={cn(
-            "w-full py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300",
+            "w-full py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-300 mt-1",
             isSuccess
               ? "bg-gradient-to-r from-green-600 to-green-700 text-white cursor-default"
-              : "bg-gold-500 text-brown-900 hover:bg-gold-400 hover:-translate-y-[2px] hover:shadow-[0_8px_20px_rgba(212,168,67,0.3)] disabled:opacity-60 disabled:cursor-not-allowed"
+              : "bg-gold-500 text-brown-900 hover:bg-gold-400 hover:-translate-y-[2px] hover:shadow-[0_8px_25px_rgba(212,168,67,0.3)] disabled:opacity-60 disabled:cursor-not-allowed"
           )}
         >
           {isSuccess
             ? "✓ Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm."
             : isSubmitting
               ? "Đang gửi..."
-              : "Gửi Yêu Cầu Tư Vấn"}
+              : "GỬI YÊU CẦU TƯ VẤN"}
         </button>
       </form>
 
