@@ -94,7 +94,7 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <span className="text-gold-400 mt-0.5">📍</span>
-                <span>Tổ 13, Nha Trang, Khánh Hòa</span>
+                <span>Tổ 13, Cồn Ngọc Thảo, Tây Nha Trang, Khánh Hòa</span>
               </li>
             </ul>
           </div>
