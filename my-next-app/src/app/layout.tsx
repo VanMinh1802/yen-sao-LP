@@ -114,7 +114,7 @@ export default function RootLayout({
   return (
     <html lang="vi" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
         <link rel="preload" href="/images/hero/hinh-yen.webp" as="image" fetchPriority="high" />
         <script
           type="application/ld+json"
