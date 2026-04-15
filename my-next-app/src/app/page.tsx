@@ -1,5 +1,6 @@
 import { HeroSection } from "@/features/hero";
 import { AboutSection } from "@/features/about";
+import { ProductsSection } from "@/features/products";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       */}
       <HeroSection />
       <AboutSection />
-      {/* <ProductsSection /> */}
+      <ProductsSection />
       {/* <ProcessSection /> */}
       {/* <WhyUsSection /> */}
       {/* <TestimonialsSection /> */}
