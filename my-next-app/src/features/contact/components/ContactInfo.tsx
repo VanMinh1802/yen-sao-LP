@@ -31,7 +31,7 @@ export function ContactInfo() {
           const inner = (
             <div className="flex items-start gap-2 text-white/80 hover:text-white transition-colors group min-w-0">
               <span className="text-base shrink-0 mt-0.5 group-hover:scale-110 transition-transform">{item.icon}</span>
-              <span className="text-sm font-medium leading-snug break-all">{item.content}</span>
+              <span className="text-sm font-medium leading-snug break-words">{item.content}</span>
             </div>
           );
 
@@ -41,11 +41,12 @@ export function ContactInfo() {
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="min-w-0"
             >
               {inner}
             </a>
           ) : (
-            <div key={i}>{inner}</div>
+            <div key={i} className="min-w-0">{inner}</div>
           );
         })}
       </div>
