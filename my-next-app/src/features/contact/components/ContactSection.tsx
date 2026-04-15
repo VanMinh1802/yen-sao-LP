@@ -15,7 +15,7 @@ export function ContactSection() {
       </div>
 
       {/* Floating Form Card */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 flex justify-end items-center md:min-h-[640px] -mt-[60px] md:mt-0 pb-12 md:pb-0">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 flex justify-start items-center md:min-h-[640px] -mt-[60px] md:mt-0 pb-12 md:pb-0">
         <ContactForm />
       </div>
     </section>

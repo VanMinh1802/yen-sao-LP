@@ -85,8 +85,8 @@ export function TestimonialCarousel() {
             className={cn(
               "h-[10px] rounded-full transition-all duration-300",
               i === activeIndex 
-                ? "w-8 bg-gradient-to-r from-red-600 to-red-500 shadow-md" 
-                : "w-[10px] bg-red-200 hover:bg-red-400"
+                ? "w-8 bg-gold-500 shadow-md" 
+                : "w-[10px] bg-gold-500/30 hover:bg-gold-400/50"
             )}
           />
         ))}

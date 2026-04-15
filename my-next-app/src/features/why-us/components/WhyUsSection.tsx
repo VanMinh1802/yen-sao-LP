@@ -10,9 +10,9 @@ export function WhyUsSection() {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionHeader 
-          label="Tại Sao Chọn Chúng Tôi"
-          title="Bảo Chứng Chất Lượng Vàng"
-          subtitle="Khám phá những giá trị cốt lõi giúp Ngọc Thảo trở thành thương hiệu yến sào uy tín hàng đầu trong suốt hơn 2 thập kỷ qua."
+          label="Cam Kết Chất Lượng"
+          title="Tại Sao Chọn Ngọc Thảo?"
+          subtitle="Chúng tôi không chỉ bán yến sào — chúng tôi mang đến trải nghiệm và niềm tin cho khách hàng."
           variant="dark"
         />
 

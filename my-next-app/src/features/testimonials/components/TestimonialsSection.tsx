@@ -11,9 +11,9 @@ export function TestimonialsSection() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionHeader 
-          label="Khách Hàng Nói Gì Về Chúng Tôi"
-          title="Hơn Cả Một Thượng Phẩm"
-          subtitle="Đằng sau mỗi hộp yến Ngọc Thảo là một câu chuyện về sức khỏe, tình thân và sự trân trọng. Hãy lắng nghe những trải nghiệm chân thực nhất."
+          label="Khách Hàng Nói Gì"
+          title="Đánh Giá Từ Khách Hàng"
+          subtitle="Sự tin tưởng của khách hàng là động lực lớn nhất để chúng tôi không ngừng nâng cao chất lượng."
         />
 
         <div className="mt-8 md:mt-16">
