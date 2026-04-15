@@ -2,6 +2,7 @@ import { HeroSection } from "@/features/hero";
 import { AboutSection } from "@/features/about";
 import { ProductsSection } from "@/features/products";
 import { ProcessSection } from "@/features/process";
+import { WhyUsSection } from "@/features/why-us";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <AboutSection />
       <ProductsSection />
       <ProcessSection />
-      {/* <WhyUsSection /> */}
+      <WhyUsSection />
       {/* <TestimonialsSection /> */}
       {/* <ContactSection /> */}
     </main>
