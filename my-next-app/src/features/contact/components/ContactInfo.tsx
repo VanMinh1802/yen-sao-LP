@@ -26,12 +26,12 @@ export function ContactInfo() {
   return (
     <div className="mt-6 pt-6 border-t border-white/10">
       {/* Contact Info — 2-column grid */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-2 gap-x-4 gap-y-4 mb-6">
         {contactItems.map((item, i) => {
           const inner = (
-            <div className="flex items-start gap-2 text-white/80 hover:text-white transition-colors group">
+            <div className="flex items-start gap-2 text-white/80 hover:text-white transition-colors group min-w-0">
               <span className="text-base shrink-0 mt-0.5 group-hover:scale-110 transition-transform">{item.icon}</span>
-              <span className="text-sm font-medium leading-snug break-words">{item.content}</span>
+              <span className="text-sm font-medium leading-snug break-all">{item.content}</span>
             </div>
           );
 
