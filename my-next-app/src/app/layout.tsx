@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Header, Footer, SkipLink } from "@/features/layout";
 
-const SITE_URL = "https://yensaongocthao.vn";
+const SITE_URL = "https://nhayenngocthao.vn";
 const SITE_NAME = "Yến Sào Ngọc Thảo Khánh Hòa";
 
 export const viewport: Viewport = {
