@@ -3,6 +3,7 @@ import { AboutSection } from "@/features/about";
 import { ProductsSection } from "@/features/products";
 import { ProcessSection } from "@/features/process";
 import { WhyUsSection } from "@/features/why-us";
+import { TestimonialsSection } from "@/features/testimonials";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <ProductsSection />
       <ProcessSection />
       <WhyUsSection />
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       {/* <ContactSection /> */}
     </main>
   );
