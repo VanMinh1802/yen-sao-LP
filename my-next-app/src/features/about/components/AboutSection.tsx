@@ -4,7 +4,7 @@ import { StatCounter } from "./StatCounter";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-cream-50 relative overflow-hidden">
+    <section id="about" className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <SectionHeader 
           label="Câu Chuyện Của Chúng Tôi"
