@@ -1,0 +1,122 @@
+"use client";
+
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactFormSchema, ContactFormData } from "../types/contact.types";
+import { ContactInfo } from "./ContactInfo";
+import { cn } from "@/lib/utils";
+
+export function ContactForm() {
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (_data: ContactFormData) => {
+    // Mock submission — simulate network delay
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    setIsSuccess(true);
+
+    setTimeout(() => {
+      setIsSuccess(false);
+      reset();
+    }, 3000);
+  };
+
+  const inputClasses =
+    "w-full bg-black/25 border border-white/15 rounded-xl px-4 py-3 text-white placeholder:text-white/40 outline-none transition-all duration-300 focus:border-gold-500 focus:shadow-[0_0_0_3px_rgba(212,168,67,0.15)] focus:bg-black/35 text-sm";
+
+  return (
+    <div className="w-full max-w-[480px] bg-gradient-to-br from-[rgba(38,17,8,0.95)] to-[rgba(138,28,28,0.95)] backdrop-blur-2xl border border-gold-500/60 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.4),_inset_0_1px_0_rgba(212,168,67,0.15)] p-8 md:p-10 relative z-20">
+      {/* Card Header */}
+      <h3 className="text-2xl md:text-[28px] font-bold text-gold-400 mb-1">
+        Kết Nối Với Chúng Tôi
+      </h3>
+      <p className="text-white/70 text-[15px] mb-8">
+        Gửi Yêu Cầu Tư Vấn Mua Hàng
+      </p>
+
+      {/* Form */}
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
+        {/* Name */}
+        <div>
+          <input
+            {...register("name")}
+            type="text"
+            placeholder="Nhập họ và tên của bạn *"
+            aria-label="Họ và tên"
+            aria-describedby={errors.name ? "name-error" : undefined}
+            className={cn(inputClasses, errors.name && "border-red-400")}
+          />
+          {errors.name && (
+            <p id="name-error" className="mt-1.5 text-xs text-red-400">
+              {errors.name.message}
+            </p>
+          )}
+        </div>
+
+        {/* Phone */}
+        <div>
+          <input
+            {...register("phone")}
+            type="tel"
+            placeholder="Số Điện Thoại (VD: 0919217882) *"
+            aria-label="Số điện thoại"
+            aria-describedby={errors.phone ? "phone-error" : undefined}
+            className={cn(inputClasses, errors.phone && "border-red-400")}
+          />
+          {errors.phone && (
+            <p id="phone-error" className="mt-1.5 text-xs text-red-400">
+              {errors.phone.message}
+            </p>
+          )}
+        </div>
+
+        {/* Message */}
+        <div>
+          <textarea
+            {...register("message")}
+            rows={3}
+            placeholder="Bạn quan tâm tới sản phẩm nào? Hoặc muốn đặt lịch tham quan nhà yến?"
+            aria-label="Lời nhắn"
+            className={cn(inputClasses, "resize-none")}
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={isSubmitting || isSuccess}
+          className={cn(
+            "w-full py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300",
+            isSuccess
+              ? "bg-gradient-to-r from-green-600 to-green-700 text-white cursor-default"
+              : "bg-gold-500 text-brown-900 hover:bg-gold-400 hover:-translate-y-[2px] hover:shadow-[0_8px_20px_rgba(212,168,67,0.3)] disabled:opacity-60 disabled:cursor-not-allowed"
+          )}
+        >
+          {isSuccess
+            ? "✓ Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm."
+            : isSubmitting
+              ? "Đang gửi..."
+              : "Gửi Yêu Cầu Tư Vấn"}
+        </button>
+      </form>
+
+      {/* Contact Info */}
+      <ContactInfo />
+    </div>
+  );
+}
