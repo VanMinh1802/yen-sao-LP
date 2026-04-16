@@ -29,14 +29,14 @@ const statItemVariant = {
 
 export function HeroStats() {
   return (
-    <div className="relative mt-3 sm:mt-4 md:mt-6 xl:mt-8 pt-3 sm:pt-4 xl:pt-5">
+    <div className="relative mt-5 sm:mt-8 md:mt-10 xl:mt-12 pt-5 sm:pt-6 xl:pt-8">
       {/* Animated decorative top border */}
       <motion.div
         variants={lineGrow}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="absolute top-0 left-0 w-full max-w-[clamp(200px,25vw,400px)] h-[1px] bg-gold-500/25 origin-left"
+        className="absolute top-0 left-0 w-full h-[1px] bg-gold-500/30 origin-left"
       />
       
       <div className="flex flex-row justify-between xl:justify-start gap-[clamp(16px,2vw,48px)]">
