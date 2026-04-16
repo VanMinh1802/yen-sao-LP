@@ -12,7 +12,7 @@ export function HeroContent() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative z-[2] w-full xl:w-[clamp(53%,57vw,57%)] h-full flex flex-col justify-center px-6 xl:pl-[clamp(160px,18vw,320px)] xl:pr-8 py-[40px] xl:h-screen"
+      className="relative z-[2] w-full xl:w-[clamp(44%,48vw,48%)] h-full flex flex-col justify-center px-6 xl:pl-[clamp(80px,8vw,200px)] xl:pr-8 py-[40px] xl:h-screen"
     >
       <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4 xl:space-y-5">
         {/* Label */}
