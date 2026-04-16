@@ -18,7 +18,7 @@ export function HeroContent() {
         {/* Label */}
         <motion.div variants={fadeInUp} className="flex items-center space-x-4">
           <div className="w-10 h-[1px] bg-gold-500" />
-          <span className="text-[clamp(11px,1vw,14px)] text-gold-500 uppercase tracking-[3px] font-semibold">
+          <span className="text-[clamp(11px,1vw,14px)] text-[#ffeeba] uppercase tracking-[3px] font-semibold">
             Hơn 20 Năm Uy Tín
           </span>
         </motion.div>
