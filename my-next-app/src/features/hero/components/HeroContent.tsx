@@ -12,7 +12,7 @@ export function HeroContent() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative z-[2] w-full lg:w-[45%] h-full flex flex-col justify-center px-6 lg:pl-[17vw] lg:pr-8 py-[40px] lg:h-screen"
+      className="relative z-[2] w-full xl:w-[48%] 2xl:w-[45%] h-full flex flex-col justify-center px-6 xl:pl-[8vw] 2xl:pl-[12vw] xl:pr-8 py-[40px] xl:h-screen"
     >
       <div className="flex flex-col space-y-4">
         {/* Label */}
@@ -26,7 +26,7 @@ export function HeroContent() {
         {/* Title */}
         <motion.h1 
           variants={fadeInUp}
-          className="font-display text-[clamp(42px,8vw,100px)] text-[#ffeeba] leading-[1.15] flex flex-col pt-2"
+          className="font-display text-[clamp(42px,6vw,90px)] text-[#ffeeba] leading-[1.15] flex flex-col pt-2"
         >
           <span>Yến Sào</span>
           <em>Ngọc Thảo</em>

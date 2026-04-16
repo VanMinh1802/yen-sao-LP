@@ -64,7 +64,7 @@ export function Header() {
           />
 
           {/* Center/Right: Desktop Nav */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
@@ -88,7 +88,7 @@ export function Header() {
           {/* Right: Mobile Hamburger */}
           <button
             type="button"
-            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-[5px] z-[1001]"
+            className="xl:hidden flex flex-col justify-center items-center w-8 h-8 space-y-[5px] z-[1001]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={String(isMenuOpen) as "true" | "false"}
             aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}

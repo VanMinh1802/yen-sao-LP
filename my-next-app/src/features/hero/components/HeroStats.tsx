@@ -36,10 +36,10 @@ export function HeroStats() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="absolute top-0 left-0 w-full h-[1px] bg-gold-500/25 origin-left"
+        className="absolute top-0 left-0 w-full max-w-[300px] h-[1px] bg-gold-500/25 origin-left"
       />
       
-      <div className="flex flex-row justify-between lg:justify-start gap-4 sm:gap-6 lg:gap-8">
+      <div className="flex flex-row justify-between xl:justify-start gap-4 sm:gap-6 xl:gap-8">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
