@@ -10,7 +10,7 @@ export const productSchema = z.object({
   id: z.string(),
   name: z.string(),
   description: z.string(),
-  category: z.enum(['raw', 'gift', 'refined']),
+  category: z.enum(['raw', 'gift', 'refined', 'ready']),
   badge: z.string().nullable(),
   imageSrc: z.string(),
   imageAlt: z.string(),
