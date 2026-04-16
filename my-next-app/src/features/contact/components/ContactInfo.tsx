@@ -8,9 +8,9 @@ interface ContactInfoItem {
 
 const contactItems: ContactInfoItem[] = [
   { icon: <MapPin className="w-[18px] h-[18px]" />, content: "Tổ 13, Cồn Ngọc Thảo, Tây Nha Trang, Khánh Hòa" },
-  { icon: <Phone className="w-[18px] h-[18px]" />, content: "0919 217 882", href: "tel:0919217882" },
+  { icon: <Phone className="w-[18px] h-[18px]" />, content: "0986 786 753", href: "tel:0986786753" },
   { icon: <Mail className="w-[18px] h-[18px]" />, content: "yensaongocthao@gmail.com", href: "mailto:yensaongocthao@gmail.com" },
-  { icon: <MessageCircle className="w-[18px] h-[18px]" />, content: "Zalo Official", href: "https://zalo.me/0919217882" },
+  { icon: <MessageCircle className="w-[18px] h-[18px]" />, content: "Zalo Official", href: "https://zalo.me/0986786753" },
 ];
 
 

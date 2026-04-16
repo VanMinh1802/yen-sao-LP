@@ -106,8 +106,7 @@ export function Footer() {
               <li className="flex items-start space-x-3">
                 <span className="text-gold-400 mt-0.5">📞</span>
                 <div>
-                  <p>(0258) 3821 494</p>
-                  <p>0919 217 882</p>
+                  <p>0986 786 753</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">

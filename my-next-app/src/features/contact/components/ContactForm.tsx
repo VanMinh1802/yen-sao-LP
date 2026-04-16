@@ -73,7 +73,7 @@ export function ContactForm() {
           <input
             {...register("phone")}
             type="tel"
-            placeholder="Số Điện Thoại (VD: 0919217882) *"
+            placeholder="Số Điện Thoại (VD: 0986786753) *"
             aria-label="Số điện thoại"
             aria-describedby={errors.phone ? "phone-error" : undefined}
             className={cn(inputClasses, errors.phone && "border-red-400")}
