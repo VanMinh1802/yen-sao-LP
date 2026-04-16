@@ -16,7 +16,7 @@ export function Logo({ className, onClick }: LogoProps) {
       }}
       className={cn("relative shrink-0 overflow-visible", className)}
     >
-      <div className="relative w-[140px] h-[50px] sm:w-[180px] sm:h-[60px] md:w-[220px] md:h-[70px] xl:w-[380px] xl:h-[120px]">
+      <div className="relative w-[clamp(140px,22vw,380px)] h-[clamp(50px,7vw,120px)]">
         <Image
           src="/images/logo/logoyen.webp"
           alt="Logo Yến Sào Ngọc Thảo"

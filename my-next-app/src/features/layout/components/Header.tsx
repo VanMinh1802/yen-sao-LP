@@ -54,7 +54,7 @@ export function Header() {
             : "bg-transparent"
         )}
       >
-        <div className="w-full mx-auto px-4 md:px-6 xl:pl-[8vw] 2xl:pl-[12vw] xl:pr-8 h-full flex items-center justify-between">
+        <div className="w-full mx-auto px-4 md:px-6 xl:pl-[clamp(80px,8vw,200px)] xl:pr-8 h-full flex items-center justify-between">
           {/* Left: Logo */}
           <Logo 
             onClick={() => {
