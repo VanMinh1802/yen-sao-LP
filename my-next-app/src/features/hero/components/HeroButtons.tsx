@@ -7,7 +7,7 @@ export function HeroButtons() {
   };
 
   return (
-    <div className="flex flex-row gap-[clamp(12px,1.2vw,24px)] mt-5 sm:mt-6 md:mt-8 xl:mt-10 w-full sm:w-fit">
+    <div className="flex flex-row gap-[clamp(12px,1.2vw,24px)] mt-3 sm:mt-4 md:mt-6 xl:mt-8 w-full sm:w-fit">
       <a
         href="#products"
         onClick={(e) => handleScroll(e, "#products")}

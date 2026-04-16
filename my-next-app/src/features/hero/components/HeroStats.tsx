@@ -29,7 +29,7 @@ const statItemVariant = {
 
 export function HeroStats() {
   return (
-    <div className="relative mt-5 sm:mt-6 md:mt-8 xl:mt-10 pt-4 sm:pt-5 xl:pt-6">
+    <div className="relative mt-3 sm:mt-4 md:mt-6 xl:mt-8 pt-3 sm:pt-4 xl:pt-5">
       {/* Animated decorative top border */}
       <motion.div
         variants={lineGrow}
