@@ -64,22 +64,21 @@ export function Header() {
           />
 
           {/* Center/Right: Desktop Nav */}
-          <nav className="hidden xl:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-full p-1.5 pl-6 shadow-lg">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-white-90 hover:text-gold-400 font-medium tracking-wide transition-colors relative group text-[15px]"
+                className="text-[#ffeeba] hover:text-white font-medium tracking-wide transition-colors text-[15px]"
               >
                 {link.label}
-                <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-gold-400 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
             <a
               href={CTA_LINK.href}
               onClick={(e) => handleNavClick(e, CTA_LINK.href)}
-              className="bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-6 py-2.5 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.39)] hover:from-gold-400 hover:to-gold-300 transition-all duration-300 text-[15px]"
+              className="bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-6 py-2 rounded-full font-bold select-none hover:-translate-y-[2px] shadow-[0_2px_10px_0_rgba(212,168,67,0.3)] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.5)] hover:from-gold-400 hover:to-gold-300 transition-all duration-300 text-[15px]"
             >
               {CTA_LINK.label}
             </a>
