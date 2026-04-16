@@ -40,12 +40,12 @@ export function ContactForm() {
     "w-full bg-black/25 border border-white/15 rounded-xl px-[18px] py-[14px] text-white placeholder:text-white/40 outline-none transition-all duration-200 focus:border-gold-500 focus:shadow-[0_0_0_4px_rgba(212,168,67,0.15)] focus:bg-black/40 text-[15px]";
 
   return (
-    <div className="w-full max-w-[480px] bg-gradient-to-br from-[rgba(38,17,8,0.95)] to-[rgba(138,28,28,0.95)] backdrop-blur-2xl border border-gold-500 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.4),_inset_0_0_0_1px_rgba(212,168,67,0.3)] p-10 relative z-20 pointer-events-auto">
+    <div className="w-full max-w-[480px] bg-gradient-to-br from-[rgba(38,17,8,0.95)] to-[rgba(138,28,28,0.95)] backdrop-blur-2xl border border-gold-500 rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.4),_inset_0_0_0_1px_rgba(212,168,67,0.3)] p-6 md:p-10 relative z-20 pointer-events-auto">
       {/* Card Header */}
-      <h3 className="text-[28px] font-bold text-gold-400 mb-2 leading-tight">
+      <h3 className="text-2xl md:text-[28px] font-bold text-gold-400 mb-2 leading-tight">
         Kết Nối Với Chúng Tôi
       </h3>
-      <p className="text-white/70 text-[15px] mb-6">
+      <p className="text-white/70 text-[14px] md:text-[15px] mb-6">
         Gửi Yêu Cầu Tư Vấn Mua Hàng
       </p>
 

@@ -15,7 +15,7 @@ export function TestimonialCard({ data, className }: TestimonialCardProps) {
       )}
     >
       {/* Quote Mark */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 text-[100px] leading-none text-gold-200 opacity-40 font-serif z-0 select-none pointer-events-none mt-4">
+      <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 text-[60px] md:text-[100px] leading-none text-gold-200 opacity-40 font-serif z-0 select-none pointer-events-none mt-2 md:mt-4">
         &ldquo;
       </div>
 

@@ -5,7 +5,7 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-24 bg-cream-50 relative overflow-hidden overflow-x-hidden border-t border-brown-100/50">
       {/* Decorative background element */}
-      <div className="absolute top-0 right-[10%] transform translate-y-[-10%] text-[400px] text-brown-100/30 font-serif leading-none select-none pointer-events-none z-0">
+      <div className="absolute top-0 right-[-10%] md:right-[10%] transform translate-y-[0%] md:translate-y-[-10%] text-[200px] md:text-[400px] text-brown-100/10 md:text-brown-100/30 font-serif leading-none select-none pointer-events-none z-0">
         &rdquo;
       </div>
 
