@@ -60,5 +60,35 @@ export const productsData: Product[] = [
       { icon: "⚖️", title: "Trọng lượng", description: "Quy cách đa dạng hộp từ 50g đến 100g" },
       { icon: "🥣", title: "Sử dụng", description: "Chỉ cần ngâm nở nhẹ và chưng cất trực tiếp không tốn công vặt lông" }
     ]
+  },
+  {
+    id: "prod-5",
+    name: "Yến Chưng Sẵn",
+    description: "Yến sào đã chưng cất sẵn, tiện lợi sử dụng ngay, phù hợp người bận rộn muốn bổ sung dưỡng chất mỗi ngày.",
+    category: "ready",
+    badge: "Tiện Lợi",
+    imageSrc: "/images/products/yen-chung-san.webp",
+    imageAlt: "Yến Chưng Sẵn",
+    price: "Liên hệ giá",
+    details: [
+      { icon: "⏱️", title: "Tiện lợi", description: "Mở nắp dùng ngay, không cần chế biến" },
+      { icon: "✨", title: "Thành phần", description: "Yến sào nguyên chất, đường phèn, nước tinh khiết" },
+      { icon: "🛡️", title: "Bảo quản", description: "Đóng hũ thủy tinh cao cấp, bảo quản lạnh" }
+    ]
+  },
+  {
+    id: "prod-6",
+    name: "Set Quà Gia Đình",
+    description: "Bộ combo yến sào đa dạng dành cho gia đình, gồm nhiều loại yến phù hợp mọi lứa tuổi và nhu cầu sử dụng.",
+    category: "gift",
+    badge: "Gia Đình",
+    imageSrc: "/images/products/set-qua-gia-dinh.webp",
+    imageAlt: "Set Quà Gia Đình",
+    price: "Liên hệ giá",
+    details: [
+      { icon: "👨‍👩‍👧‍👦", title: "Đối tượng", description: "Phù hợp mọi thành viên trong gia đình" },
+      { icon: "🎁", title: "Thành phần", description: "Combo yến thô, yến sợi và yến chưng sẵn" },
+      { icon: "💫", title: "Ý nghĩa", description: "Món quà sức khỏe trọn vẹn cho người thân yêu" }
+    ]
   }
 ];
