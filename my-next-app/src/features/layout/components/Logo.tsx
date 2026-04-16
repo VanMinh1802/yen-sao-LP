@@ -14,16 +14,16 @@ export function Logo({ className, onClick }: LogoProps) {
       onClick={(e) => {
         if (onClick) onClick();
       }}
-      className={cn("relative w-[220px] md:w-[350px] h-[36px] md:h-[48px] flex items-center justify-start shrink-0", className)}
+      className={cn("relative shrink-0 overflow-visible", className)}
     >
-      <div className="absolute top-[-28px] md:top-[-40px] left-[-30px] md:left-[-60px] xl:left-[-150px] h-[90px] md:h-[130px] w-[250px] md:w-[350px]">
+      <div className="relative w-[140px] h-[50px] sm:w-[180px] sm:h-[60px] md:w-[220px] md:h-[70px] xl:w-[280px] xl:h-[90px]">
         <Image
           src="/images/logo/logoyen.webp"
           alt="Logo Yến Sào Ngọc Thảo"
           fill
           className="object-contain object-left"
           priority
-          sizes="(max-width: 768px) 250px, 350px"
+          sizes="(max-width: 640px) 140px, (max-width: 768px) 180px, (max-width: 1280px) 220px, 280px"
         />
       </div>
     </Link>
