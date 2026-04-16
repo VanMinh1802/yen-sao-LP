@@ -12,12 +12,12 @@ export function HeroContent() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative z-[2] w-full xl:w-[clamp(44%,48vw,48%)] h-full flex flex-col justify-center px-6 xl:pl-[clamp(80px,8vw,200px)] xl:pr-8 py-[40px] xl:h-screen"
+      className="relative z-[2] w-full xl:w-[clamp(53%,57vw,57%)] h-full flex flex-col justify-center px-6 xl:pl-[clamp(160px,18vw,320px)] xl:pr-8 py-[40px] xl:h-screen"
     >
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col space-y-2 sm:space-y-3 md:space-y-4 xl:space-y-5">
         {/* Label */}
-        <motion.div variants={fadeInUp} className="flex items-center space-x-4">
-          <div className="w-10 h-[1px] bg-gold-500" />
+        <motion.div variants={fadeInUp} className="flex items-center gap-[clamp(12px,1vw,24px)]">
+          <div className="w-[clamp(32px,3vw,48px)] h-[1px] bg-gold-500" />
           <span className="text-[clamp(11px,1vw,14px)] text-[#ffeeba] uppercase tracking-[3px] font-semibold">
             Hơn 20 Năm Uy Tín
           </span>
@@ -26,7 +26,7 @@ export function HeroContent() {
         {/* Title */}
         <motion.h1 
           variants={fadeInUp}
-          className="font-display text-[clamp(42px,6vw,90px)] text-[#ffeeba] leading-[1.15] flex flex-col pt-2"
+          className="font-display text-[clamp(42px,6vw,90px)] text-[#ffeeba] leading-[1.15] flex flex-col pt-0 sm:pt-1 xl:pt-2"
         >
           <span>Yến Sào</span>
           <em>Ngọc Thảo</em>
@@ -35,7 +35,7 @@ export function HeroContent() {
         {/* Slogan */}
         <motion.div 
           variants={fadeInUp}
-          className="text-[#ffeeba] text-[clamp(18px,1.8vw,26px)] italic flex flex-col pt-2"
+          className="text-[#ffeeba] text-[clamp(18px,1.8vw,26px)] italic flex flex-col pt-0 sm:pt-1 xl:pt-2"
         >
           <span>Thành Ý Gửi Trao</span>
           <span className="text-[0.9em] opacity-85">— Tâm Giao Nhân Khắp</span>
