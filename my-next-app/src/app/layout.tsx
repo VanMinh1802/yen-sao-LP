@@ -112,16 +112,15 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="vi" suppressHydrationWarning>
+    <html lang="vi" suppressHydrationWarning className={`${fontHeading.variable} ${fontBody.variable} ${fontDisplay.variable}`}>
       <head>
-
         <link rel="preload" href="/images/hero/hinh-yen.webp" as="image" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${fontHeading.variable} ${fontBody.variable} ${fontDisplay.variable} antialiased`}>
+      <body className="antialiased">
         <Providers>
           <SkipLink />
           <Header />
