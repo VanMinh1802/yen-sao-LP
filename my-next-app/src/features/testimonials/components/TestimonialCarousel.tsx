@@ -63,7 +63,7 @@ export function TestimonialCarousel() {
             <div
               key={testimonial.id}
               className={cn(
-                "absolute top-0 bottom-0 left-0 right-0 mx-auto w-full md:w-[600px] flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]",
+                "absolute top-0 bottom-0 left-0 right-0 mx-auto w-full md:w-[600px] flex items-center justify-center transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]",
                 getStateClasses(state)
               )}
             >

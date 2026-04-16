@@ -6,9 +6,9 @@ export function HeroSection() {
       {/* Content wrapper: positioned properly via flex on mobile, takes full height on desktop */}
       <HeroContent />
 
-      {/* Background Image Layer: relative 350px height on mobile, absolute full-bleed on desktop */}
+      {/* Background Image Layer: relative 400px height on mobile, absolute full-bleed on desktop */}
       <div 
-        className="relative lg:absolute lg:inset-0 w-full h-[350px] lg:h-full z-[1] bg-cover bg-[center_top] lg:bg-center bg-no-repeat shrink-0"
+        className="relative lg:absolute lg:inset-0 w-full h-[400px] lg:h-full z-[1] bg-cover bg-[center_top] lg:bg-center bg-no-repeat shrink-0"
         style={{ backgroundImage: "url('/images/hero/hinh-yen.webp')" }}
       >
         <div className="absolute inset-0 bg-black/15" />

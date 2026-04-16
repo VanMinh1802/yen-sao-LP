@@ -50,3 +50,5 @@ next-env.d.ts
 
 
 !.dev.vars.example
+
+my-next-app/public/images/gallery/*

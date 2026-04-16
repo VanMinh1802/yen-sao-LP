@@ -26,7 +26,7 @@ export function HeroContent() {
         {/* Title */}
         <motion.h1 
           variants={fadeInUp}
-          className="font-display text-[clamp(52px,6vw,100px)] text-[#ffeeba] leading-[1.15] flex flex-col pt-2"
+          className="font-display text-[clamp(42px,8vw,100px)] text-[#ffeeba] leading-[1.15] flex flex-col pt-2"
         >
           <span>Yến Sào</span>
           <em>Ngọc Thảo</em>

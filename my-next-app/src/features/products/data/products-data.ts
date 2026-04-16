@@ -7,7 +7,7 @@ export const productsData: Product[] = [
     description: "Tổ yến nguyên chất 100%, chưa qua xử lý làm sạch, giữ trọn vẹn dưỡng chất tự nhiên và nguyên bản nhất.",
     category: "raw",
     badge: "Bán Chạy",
-    imageSrc: "/images/products/yen-tho-nguyen-to.webp",
+    imageSrc: "/images/products/img-9367.webp",
     imageAlt: "Yến Thô Nguyên Tổ",
     price: "Liên hệ giá",
     details: [
@@ -37,7 +37,7 @@ export const productsData: Product[] = [
     description: "Yến sào dạng sợi dài nguyên chất, tinh chế thủ công tỉ mỉ, giúp bữa yến thêm thơm ngon và dai dãn.",
     category: "refined",
     badge: null,
-    imageSrc: "/images/products/yen-soi-cao-cap.webp",
+    imageSrc: "/images/products/img-7372.webp",
     imageAlt: "Yến Sợi Cao Cấp",
     price: "Liên hệ giá",
     details: [
@@ -59,36 +59,6 @@ export const productsData: Product[] = [
       { icon: "⚡", title: "Đặc điểm", description: "Làm sạch kỹ lưỡng vô trùng tiện dụng" },
       { icon: "⚖️", title: "Trọng lượng", description: "Quy cách đa dạng hộp từ 50g đến 100g" },
       { icon: "🥣", title: "Sử dụng", description: "Chỉ cần ngâm nở nhẹ và chưng cất trực tiếp không tốn công vặt lông" }
-    ]
-  },
-  {
-    id: "prod-5",
-    name: "Set Quà Đặc Biệt",
-    description: "Bộ sản phẩm mang đậm phong thái Á Đông phú quý, chứa đựng thông điệp sắc xuân đong đầy tài lộc hoan hỷ thiết kế riêng.",
-    category: "gift",
-    badge: "Đặc Biệt",
-    imageSrc: "/images/products/set-qua-dac-biet.webp",
-    imageAlt: "Set Quà Đặc Biệt",
-    price: "Liên hệ giá",
-    details: [
-      { icon: "🎁", title: "Giao hoà", description: "Sang trọng và ý nghĩa" },
-      { icon: "❤️", title: "Giá trị", description: "Thay nghìn lời chúc vạn sự trân quý" },
-      { icon: "✔️", title: "Độc quyền", description: "Mẫu mã thiết kế độc bản" }
-    ]
-  },
-  {
-    id: "prod-6",
-    name: "Yến Thô Đảo",
-    description: "Yến quý thu hoạch cực khổ trực tiếp từ các vách đá cheo leo hang động tại đảo biển, có tổ chức hình thành chắc chắn vững chãi.",
-    category: "raw",
-    badge: null,
-    imageSrc: "/images/products/yen-tho-dao.webp",
-    imageAlt: "Yến Thô Đảo",
-    price: "Liên hệ giá",
-    details: [
-      { icon: "🌊", title: "Khai thác", description: "Tự nhiên hoang dã tại vùng ven khơi hải đảo xa xôi" },
-      { icon: "💎", title: "Dưỡng chất", description: "Chứa vô số vi chất quý báu do điều kiện tự nhiên khắc nghiệt" },
-      { icon: "🔒", title: "Tin cậy", description: "Giấy tờ pháp lý minh bạch toàn phần" }
     ]
   }
 ];

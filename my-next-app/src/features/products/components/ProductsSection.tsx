@@ -11,7 +11,7 @@ export function ProductsSection() {
           subtitle="Mỗi sản phẩm đều được tuyển chọn kỹ lưỡng, đảm bảo chất lượng tự nhiên từ nhà yến riêng tại Nha Trang."
         />
 
-        <div className="mt-12">
+        <div className="mt-12 w-full">
           <ProductGrid />
         </div>
       </div>

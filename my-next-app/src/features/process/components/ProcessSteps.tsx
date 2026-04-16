@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
+import { luxuryEase } from "@/lib/motion";
 import { processData } from "../data/process-data";
 import { ProcessStep } from "./ProcessStep";
 
@@ -10,14 +11,15 @@ export function ProcessSteps() {
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   const staggerVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
+      filter: "blur(0px)",
       transition: {
         delay: i * 0.2,
-        duration: 0.6,
-        ease: "easeOut"
+        duration: 0.8,
+        ease: luxuryEase
       }
     })
   };
@@ -33,7 +35,7 @@ export function ProcessSteps() {
         className="hidden md:block absolute left-[10%] right-[10%] top-[98px] h-[2px] bg-gradient-to-r from-gold-400 to-gold-600 z-[0] origin-left"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: isInView ? 1 : 0 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        transition={{ duration: 2.5, ease: luxuryEase }}
       />
 
       {/* Vertical Progress Line (Mobile) */}
@@ -43,7 +45,7 @@ export function ProcessSteps() {
         className="md:hidden absolute left-[56px] top-[40px] bottom-[40px] w-[2px] bg-gradient-to-b from-gold-400 to-gold-600 z-[0] origin-top"
         initial={{ scaleY: 0 }}
         animate={{ scaleY: isInView ? 1 : 0 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        transition={{ duration: 2.5, ease: luxuryEase }}
       />
 
       <div className="flex flex-col md:flex-row justify-between relative z-10 gap-12 md:gap-0">

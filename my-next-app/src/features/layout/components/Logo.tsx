@@ -16,7 +16,7 @@ export function Logo({ className, onClick }: LogoProps) {
       }}
       className={cn("relative w-[220px] md:w-[350px] h-[36px] md:h-[48px] flex items-center justify-start shrink-0", className)}
     >
-      <div className="absolute top-[-28px] md:top-[-40px] left-[-90px] md:left-[-150px] h-[90px] md:h-[130px] w-[300px] md:w-[350px]">
+      <div className="absolute top-[-28px] md:top-[-40px] left-[-30px] md:left-[-150px] h-[90px] md:h-[130px] w-[250px] md:w-[350px]">
         <Image
           src="/images/logo/logoyen.webp"
           alt="Logo Yến Sào Ngọc Thảo"

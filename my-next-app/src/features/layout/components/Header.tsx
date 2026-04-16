@@ -45,78 +45,81 @@ export function Header() {
   };
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 h-[70px] z-[1000] transition-all duration-300 ease-in-out",
-        isScrolled 
-          ? "bg-[#1A0A00]/95 backdrop-blur-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.3)]" 
-          : "bg-transparent"
-      )}
-    >
-      <div className="container mx-auto px-4 md:px-6 h-full flex items-center justify-between">
-        {/* Left: Logo */}
-        <Logo 
-          onClick={() => {
-            setIsMenuOpen(false);
-            document.querySelector("#hero")?.scrollIntoView({ behavior: 'smooth' });
-          }} 
-        />
+    <>
+      <header
+        className={cn(
+          "fixed top-0 left-0 right-0 h-[70px] z-[1000] transition-all duration-300 ease-in-out",
+          isScrolled 
+            ? "bg-[#1A0A00]/95 backdrop-blur-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.3)]" 
+            : "bg-transparent"
+        )}
+      >
+        <div className="container mx-auto px-4 md:px-6 h-full flex items-center justify-between">
+          {/* Left: Logo */}
+          <Logo 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.querySelector("#hero")?.scrollIntoView({ behavior: 'smooth' });
+            }} 
+          />
 
-        {/* Center/Right: Desktop Nav */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {NAV_LINKS.map((link) => (
+          {/* Center/Right: Desktop Nav */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-white-90 hover:text-gold-400 font-medium tracking-wide transition-colors relative group text-[15px]"
+              >
+                {link.label}
+                <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-gold-400 transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
             <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="text-white-90 hover:text-gold-400 font-medium tracking-wide transition-colors relative group text-[15px]"
+              href={CTA_LINK.href}
+              onClick={(e) => handleNavClick(e, CTA_LINK.href)}
+              className="bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-6 py-2.5 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.39)] hover:from-gold-400 hover:to-gold-300 transition-all duration-300 text-[15px]"
             >
-              {link.label}
-              <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-gold-400 transition-all duration-300 group-hover:w-full" />
+              {CTA_LINK.label}
             </a>
-          ))}
-          <a
-            href={CTA_LINK.href}
-            onClick={(e) => handleNavClick(e, CTA_LINK.href)}
-            className="bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-6 py-2.5 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.39)] hover:from-gold-400 hover:to-gold-300 transition-all duration-300 text-[15px]"
-          >
-            {CTA_LINK.label}
-          </a>
-        </nav>
+          </nav>
 
-        {/* Right: Mobile Hamburger */}
-        <button
-          className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-[5px] z-[1001]"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}
-        >
-          <span 
-            className={cn(
-              "block w-6 h-[2px] bg-white transition-all duration-300",
-              isMenuOpen && "translate-y-[7px] rotate-45"
-            )} 
-          />
-          <span 
-            className={cn(
-              "block w-6 h-[2px] bg-white transition-all duration-300",
-              isMenuOpen && "opacity-0"
-            )} 
-          />
-          <span 
-            className={cn(
-              "block w-6 h-[2px] bg-white transition-all duration-300",
-              isMenuOpen && "-translate-y-[7px] -rotate-45"
-            )} 
-          />
-        </button>
-      </div>
+          {/* Right: Mobile Hamburger */}
+          <button
+            type="button"
+            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-[5px] z-[1001]"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={String(isMenuOpen) as "true" | "false"}
+            aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}
+          >
+            <span 
+              className={cn(
+                "block w-6 h-[2px] bg-white transition-all duration-300",
+                isMenuOpen && "translate-y-[7px] rotate-45"
+              )} 
+            />
+            <span 
+              className={cn(
+                "block w-6 h-[2px] bg-white transition-all duration-300",
+                isMenuOpen && "opacity-0"
+              )} 
+            />
+            <span 
+              className={cn(
+                "block w-6 h-[2px] bg-white transition-all duration-300",
+                isMenuOpen && "-translate-y-[7px] -rotate-45"
+              )} 
+            />
+          </button>
+        </div>
+      </header>
 
       <MobileMenu 
         isOpen={isMenuOpen} 
         onClose={() => setIsMenuOpen(false)} 
         links={[...NAV_LINKS, CTA_LINK]} 
       />
-    </header>
+    </>
   );
 }
