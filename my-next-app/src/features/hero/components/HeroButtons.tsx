@@ -7,18 +7,18 @@ export function HeroButtons() {
   };
 
   return (
-    <div className="flex flex-row gap-4 flex-wrap mt-8">
+    <div className="flex flex-col sm:flex-row gap-4 mt-8 w-fit">
       <a
         href="#products"
         onClick={(e) => handleScroll(e, "#products")}
-        className="bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-8 py-3 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.4)] transition-all duration-300"
+        className="text-center min-w-[200px] bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-8 py-3 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.4)] transition-all duration-300"
       >
         Xem Sản Phẩm
       </a>
       <a
         href="#contact"
         onClick={(e) => handleScroll(e, "#contact")}
-        className="bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-8 py-3 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.4)] transition-all duration-300"
+        className="text-center min-w-[200px] bg-gradient-to-br from-gold-500 to-gold-400 text-brown-900 px-8 py-3 rounded-full font-bold select-none hover:-translate-y-[2px] hover:shadow-[0_4px_14px_0_rgba(212,168,67,0.4)] transition-all duration-300"
       >
         Liên Hệ Ngay
       </a>
